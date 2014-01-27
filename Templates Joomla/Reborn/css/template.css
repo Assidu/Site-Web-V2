@@ -450,12 +450,8 @@ html, body{
 /********************************/
 /*       Connection page        */
 /********************************/
-.login:before{
- content:'Désolé, vous devez vous connecter afin de pouvoir accéder à cette page.';
-}
-
 .login form{
- display:none;
+ display:block;
 }
 
 #login-form, .login{
@@ -501,11 +497,14 @@ html, body{
 
 #login-form  .cbLoginButtonSpan input{
  margin-left: 120px;
- margin-top: 15px;
 }
 
 #login-form  .cbLostLoginLi a{
  margin-left: 120px;
+}
+
+.login .migrate {
+ margin: 3em 0 3em;
 }
 /********************************/
 /*      Lost password page      */

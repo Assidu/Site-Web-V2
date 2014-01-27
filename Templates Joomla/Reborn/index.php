@@ -160,7 +160,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
      if($option == 'com_content'){
      	include 'layout/lyt_' . $view . '.php';
      }else if($option == 'com_comprofiler' ){
-     	include 'layout/lyt_annuaire.php';
+     	if($task == 'registers'){
+     		include 'layout/lyt_register.php';
+     	} else if($task == 'login'){
+     		include 'layout/lyt_login.php';
+     	} else {
+     		include 'layout/lyt_annuaire.php';
+     	}
      }else if($option == 'com_acctexp'){ ?>
         <div id="Banner">
       		<img src=<?php echo '"'.$this->baseurl.'/images/Templates/banner_template.png'.'"' ?>/>
