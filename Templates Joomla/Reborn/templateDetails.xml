@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+	<extension version="3.0" type="template" client="site" method="upgrade">
+	<name>reborn</name>
+	<version>0.11</version>
+	<creationDate>june 2013</creationDate>
+	<author>Thomas HUGUENIN</author>
+	<authorEmail>contact@assidu-utbm.fr</authorEmail>
+	<copyright>Copyright (C) 2013 Assidu All rights reserved.</copyright>
+	<description>TPL_REBORN_XML_DESCRIPTION</description>
+	<files>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>scripts</folder>
+		<folder>layout</folder>
+	</files>
+	<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>TopBar-Menu-Accueil</position>
+		<position>TopBar-Menu-Connecte</position>
+		<position>Connexion</position>
+		<position>Footer-Accueil</position>
+		<position>Footer-Connecte</position>
+		<position>BannerNews</position>
+		<position>TopBar-UserMenu-Accueil</position>
+		<position>TopBar-UserMenu-Connecte</position>
+	</positions>
+	<languages folder="language">
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_reborn.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_reborn.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="debug" type="list" default="hidden" label="Debug panel" description="">
+				  <option value="hidden">Hidden</option>
+				  <option value="invite">Invité</option>
+				  <option value="membre">Membre</option>
+				  <option value="cotisant">Cotisant</option>
+				</field>
+				<field name="img_logo" type="media" directory="Logos" label="Select a logo" description="Image for website logo" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
