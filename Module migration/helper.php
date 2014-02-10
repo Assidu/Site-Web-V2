@@ -12,9 +12,9 @@ class modMigrationv1v2Helper
      * @param array $params An object containing the module parameters
      * @access public
      */    
-    public static function getHello( $params )
+    public static function initMigration($userInfo)
     {
-        return 'Hello, World!';
+        return '{"data":"'.$userInfo.'"}';
     }
 }
 ?>

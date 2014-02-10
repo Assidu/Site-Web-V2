@@ -9,7 +9,12 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
 // Include the syndicate functions only once
 require_once( dirname(__FILE__).'/helper.php' );
- 
-$hello = modMigrationv1v2Helper::getHello( $params );
+
+$jinput = JFactory::getApplication()->input;
+$method = $jinput->get('method');
+if($method == 'init'){
+	$data = $jinput->get('data');
+	$result = modMigrationv1v2Helper::initMigration($data);
+}
 require( JModuleHelper::getLayoutPath( 'mod_migrationv1v2' ) );
 ?>
