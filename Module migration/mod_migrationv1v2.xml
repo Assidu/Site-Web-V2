@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+  <name>Migration V1 V2</name>
+  <!-- The following elements are optional and free of formatting constraints -->
+  <creationDate>February 2014</creationDate>
+  <author>Thomas HUGUENIN</author>
+  <authorEmail>thomas.huguenin@assidu-utbm.fr</authorEmail>
+  <authorUrl>http://www.assidu-utbm.fr</authorUrl>
+  <copyright>Copyright Assidu-NFC 2014 - All Right reserved to Assidu-NFC</copyright>
+  <version>0.1.0.20</version>
+  <!-- The description is optional and defaults to the name -->
+  <description>Module to migrate Assidu V1 website accounts to Assidu V2 website.(TODO utiliser système multilangue ici)</description>
+   <files>
+       <filename>mod_migrationv1v2.xml</filename>
+       <filename module="mod_migrationv1v2">mod_migrationv1v2.php</filename>
+       <filename>index.html</filename>
+       <filename>helper.php</filename>
+       <filename>tmpl/default.php</filename>
+       <filename>tmpl/index.html</filename>
+   </files>
+   <config>
+   </config>
+</extension>
