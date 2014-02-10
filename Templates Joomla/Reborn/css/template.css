@@ -491,8 +491,7 @@ html, body{
 }
 
 #login-form .cbLoginButtonSpan{
- display: inline-block;
- width: 100%;
+ display: none;
 }
 
 #login-form  .cbLoginButtonSpan input{
@@ -503,9 +502,11 @@ html, body{
  margin-left: 120px;
 }
 
-.login .migrate {
- margin: 3em 0 3em;
+#MigrationBtnLogin {
+ margin-left: 120px;
+ margin-bottom: 4em;
 }
+
 /********************************/
 /*      Lost password page      */
 /********************************/
@@ -1226,7 +1227,7 @@ input[type=text],input[type=password] {
  box-shadow: inset 1px 1px 5px black;
 }
 /* Input - submit */
-input[type=submit],button[type=submit]{
+input[type=submit],button[type=submit], .button{
  border:none;
  border-radius: 5px 0;
  padding: 3px 8px;
