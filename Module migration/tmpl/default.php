@@ -35,20 +35,55 @@ if(ISSET($result)){
 	  	
 	  	var migrationGetInfo = $('#MigrationBtnGetInfo');  	
 	  	migrationGetInfo.click(function() {
-			alert('Check old base');
 			$.ajax({
 				url:'http://www-dev.assidu-utbm.fr/site-v2_dev3',
 				data:{
 					option:'com_ajax',
 					module:'migrationv1v2',
 					method:'init',
-					data : 'dataaaaa'
+					data : 'dataaaaa' // todo id & pwd user
 				},
 				success:function(data){
-					alert(data);
+					data = $.parseJSON(data);
+					$('#firstname')[0].value = data.prenom;
+					$('#lastname')[0].value = data.nom;
+					$('#cb_nickname')[0].value = data.surnom;
+					// $('#cb_profiletype')[0].value = data.typecompte; TODO
+					// $('#cb_school')[0].value = data.ecole; TODO
+					$('#username')[0].value = data.identifiant;
+					$('#cb_promo')[0].value = data.promo;
+					// $('#cb_branche')[0].value = data.branche; TODO
+					// $('#cb_birthdate')[0].value = data.datenaissance; TODO
+					$('#cb_intitule')[0].value = data.intitule;
+					$('#cb_filiere')[0].value = data.filiere;
+					$('#cb_icq')[0].value = data.icq;
+					$('#cb_msn')[0].value = data.msn;
+					$('#cb_aim')[0].value = data.aim;
+					$('#cb_yahoo')[0].value = data.yahoo;
+					$('#cb_google')[0].value = data.google;
+					$('#cb_skype')[0].value = data.skype;
+					$('#email')[0].value = data.couriel;
+					$('#address')[0].value = data.adresse;
+					$('#zipcode')[0].value = data.codepostal;
+					$('#city')[0].value = data.ville;
+					$('#country')[0].value = data.pays;
+					$('#phone')[0].value = data.tel;
+					$('#website')[0].value = data.siteweb;
+					$('#cb_phone2')[0].value = data.tel2;
+					$('#cb_contrat')[0].value = data.contrat;
+					$('#cb_divers')[0].value = data.divers;
+					$('#company')[0].value = data.entreprise;
+					$('#cb_jobpostalcode')[0].value = data.entreprisecp;
+					$('#cb_jobcity')[0].value = data.entrepriseville;
+					$('#cb_jobmail')[0].value = data.entreprisecouriel;
+					$('#cb_jobdomaine')[0].value = data.entreprisedomaine;
+					$('#cb_jobcountry')[0].value = data.entreprisepays;
+					$('#cb_jobsituation')[0].value = data.entreprisesituation;
+					$('#cb_jobphone')[0].value = data.entreprisetel;
+					$('#cb_jobadress')[0].value = data.entrepriseadresse;
+					$('#cb_jobcodepostal')[0].value = data.entreprisecp2;
 				}
 			});
-			alert('Fill register fields');
 	  	});	
 	  	
 	  	var registerBtn = $('#registrationTable .button')[0];
