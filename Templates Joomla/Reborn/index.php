@@ -27,9 +27,11 @@
 	   //return $items; 
 	} */
 	if($option == 'com_ajax'){
-		echo 'Page ajax !';
-		echo '<jdoc:include type="component" />';
-     	echo '<jdoc:include type="modules" name="position-7" /> <!-- TODO changer nom position -->	';	
+		if(JRequest::getCmd('module', '') == 'migrationv1v2'){
+     		echo '<jdoc:include type="modules" name="position-7" />';
+		}else{
+			echo 'Error in ajax module';	
+		}
 	}else{
 ?>
 <!DOCTYPE html>
