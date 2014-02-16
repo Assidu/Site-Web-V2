@@ -490,10 +490,6 @@ html, body{
  top: 2px;
 }
 
-#login-form .cbLoginButtonSpan{
- display: none;
-}
-
 #login-form  .cbLoginButtonSpan input{
  margin-left: 120px;
 }
