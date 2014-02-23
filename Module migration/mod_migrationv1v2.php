@@ -13,7 +13,7 @@ require_once( dirname(__FILE__).'/helper.php' );
 $jinput = JFactory::getApplication()->input;
 $method = $jinput->get('method');
 if($method == 'init'){
-	$data = $jinput->get('data');
+	$data = $_GET['data'];
 	$result = modMigrationv1v2Helper::initMigration($data);
 }
 require( JModuleHelper::getLayoutPath( 'mod_migrationv1v2' ) );
