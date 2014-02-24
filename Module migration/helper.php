@@ -27,9 +27,9 @@ class modMigrationv1v2Helper
 			
 			// On vérifie l'identité de l'utilisateur et si le compte n'a pas déjà été migré
 			$query = $db->getQuery(true)
-			            ->select('*') // TODO
-			            ->from($db->quoteName('v1_users')) // TODO
-			            ->where('login = '. $db->Quote($userInfo->id)); // TODO
+			            ->select('*')
+			            ->from($db->quoteName('v1_users'))
+			            ->where('login = '. $db->Quote($userInfo->id));
 			$db->setQuery($query);
 			$result = $db->loadAssocList();
 			
@@ -44,22 +44,23 @@ class modMigrationv1v2Helper
 				}
 			}					
 			if($userFound == -1){// TODO
-				return '{"msg":"error","text":"Wrong ID/PWD"}';	 // TODO
+				return '{"typeMsg":"error","text":"Mauvais identifiants et/ou mot de passe"}';	 // TODO NLS
 	    	}else if($result[0]['migration'] == '1'){// TODO
-	    		return '{"msg":"error","text":"Account has already migrate."}';	 // TODO
+	    		return '{"typeMsg":"error","text":"Ce compte a déjà été migré."}';	 // TODO NLS
 	    	}
 		} catch (Exception $e) {
-			return '{"msg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO
+			return '{"typeMsg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO NLS
 		}
 
 		// Tempory return values
     	$data ='{';
+    	$data.='"typeMsg":"data",';
     	$data.='"nom":"'.urlencode($result[$i]['nom']).'",';
     	$data.='"prenom":"'.urlencode($result[$i]['prenom']).'",';
     	$data.='"surnom":"'.urlencode($result[$i]['surnom']).'",';
     	$data.='"typecompte":"'.urlencode($result[$i]['nom']).'",'; // TODO
     	$data.='"ecole":"'.urlencode($result[$i]['ecole']).'",';
-    	$data.='"identifiant":"'.urlencode($result[$i]['login']).'",';
+    	$data.='"identifiant":"'.urlencode($result[$i]['emailavie']).'",';
     	$data.='"promo":"'.urlencode($result[$i]['promo']).'",';
     	$data.='"branche":"'.urlencode($result[$i]['branche']).'",';
     	$data.='"datenaissance":"'.urlencode($result[$i]['datenaissance']).'",';
@@ -90,15 +91,44 @@ class modMigrationv1v2Helper
     	$data.='"entreprisesituation":"'.urlencode($result[$i]['situation_pro']).'",';
     	$data.='"entreprisetel":"'.urlencode($result[$i]['telpro']).'",';
     	$data.='"entrepriseadresse":"'.urlencode($result[$i]['adresse_entreprise']).'",';
-    	$data.='"entreprisecp2":"'.urlencode($result[$i]['code_postal_entreprise']).'"';
-    	//TODO droit
-    	//TODO note_admin
-    	//TODO validation
-    	//TODO photo
-    	//TODO emailavie
-    	//TODO nom de naissance
+    	$data.='"entreprisecp2":"'.urlencode($result[$i]['code_postal_entreprise']).'",';
+    	$data.='"noteAdmin":"'.urlencode($result[$i]['note_admin']).'",';
+    	$data.='"droitAvantMigration":"'.urlencode($result[$i]['droit']).'",';
+    	$data.='"nom_jf":"'.urlencode($result[$i]['nom_jf']).'"';
     	$data.='}';
         return $data;
+    }
+    
+     /**
+     * Retrieves the hello message
+     *
+     * @param array $params An object containing the module parameters
+     * @access public
+     */    
+    public static function setMigration($inputs)
+    {
+    	$userInfo = json_decode($inputs);
+    	if($userInfo == null){
+    		return '{"msg":"error","text":"Unable to parse JSON datas."}'; //TODO lang	
+    	}
+    	
+    	// TODO Vérifier valeur d'entré contre injection SQL
+    	
+    	try {
+	    	//Obtain a database connection
+			$db = JFactory::getDbo();
+			
+			// On vérifie l'identité de l'utilisateur et si le compte n'a pas déjà été migré
+			$query = $db->getQuery(true)
+			            ->update($db->quoteName('v1_users'))
+			            ->set($db->quoteName('migration') . '=1')
+			            ->where('login = '. $db->Quote($userInfo->id));
+			$db->setQuery($query);
+			$result = $db->query();
+			return '{"typeMsg":"error","text":"Database access:\n"'.$result.'}';
+    	}catch (Exception $e) {
+			return '{"typeMsg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO NLS
+		}
     }
 }
 ?>
