@@ -184,7 +184,7 @@ html, body{
  min-width:1020px;
  padding-top: 20em;
 }
-#Content .item-page{
+#Content .item-page, #aec-subscriptiondetails{
  margin: 0em 5% 1em 5%;
 }
 
@@ -578,7 +578,21 @@ html, body{
 .cb_result_warning {
  display:none !important;
 }
-
+/********************************/
+/*      Registration page       */
+/********************************/
+#aec-subscriptiondetails p:first-of-type{
+ display: none;
+}
+#aec-subscriptiondetails .alert p{
+ display: inherit;
+}
+#aec-subscriptiondetails .alert-info h4{
+	display:none;
+}
+#aec-subscriptiondetails .alert-info .subscription-info:first-of-type{
+	display:none;
+}
 /********************************/
 /*        A propos page         */
 /********************************/
