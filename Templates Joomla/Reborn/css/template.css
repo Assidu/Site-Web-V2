@@ -184,7 +184,7 @@ html, body{
  min-width:1020px;
  padding-top: 20em;
 }
-#Content .item-page{
+#Content .item-page, #aec-subscriptiondetails{
  margin: 0em 5% 1em 5%;
 }
 
@@ -448,6 +448,22 @@ html, body{
  -webkit-transform: rotate(25deg);
 }
 /********************************/
+/*      Module de migration     */
+/********************************/
+.migration {
+	display: inline-table;
+	padding: 1em;
+	margin: 0em 0 2em 0em;
+	border: 1px solid #009BD6;
+}
+.migration .message{
+	display: block;
+	margin: 1em 0 0;
+}
+.migration .error{
+	color: red;
+}
+/********************************/
 /*       Connection page        */
 /********************************/
 .login form{
@@ -490,11 +506,6 @@ html, body{
  top: 2px;
 }
 
-#login-form .cbLoginButtonSpan{
- display: inline-block;
- width: 100%;
-}
-
 #login-form  .cbLoginButtonSpan input{
  margin-left: 120px;
 }
@@ -503,9 +514,6 @@ html, body{
  margin-left: 120px;
 }
 
-.login .migrate {
- margin: 3em 0 3em;
-}
 /********************************/
 /*      Lost password page      */
 /********************************/
@@ -552,12 +560,6 @@ html, body{
  position:relative;
 }
 
-#registrationTable .fieldCell span{
- position: absolute;
- right: -20px;
- top: 6px;
-}
-
 #cbfr_termsc{
  width: 100% !important;
  text-align: center;
@@ -568,11 +570,29 @@ html, body{
  display:inline-block;
 }
 
+#registrationTable #cbcbfr_58,#registrationTable #cbfr_42,#registrationTable #cbfr_58,#registrationTable #cbfr_60,#registrationTable #cbfr_61,#registrationTable #cbfr_66,#registrationTable #cbfr_77,#registrationTable #cbfr_92,#registrationTable #cbfr_70,#registrationTable #cbfr_71,#registrationTable #cbfr_72,#registrationTable #cbfr_73,#registrationTable #cbfr_74,#registrationTable #cbfr_75,#registrationTable #cbfr_30,#registrationTable #cbfr_64,#registrationTable #cbfr_65,#registrationTable #cbfr_76,#registrationTable #cbfr_91,#registrationTable #cbfr_93,#registrationTable #cbfr_34,#registrationTable #cbfr_67,#registrationTable #cbfr_68,#registrationTable #cbfr_69,#registrationTable #cbfr_82,#registrationTable #cbfr_83,#registrationTable #cbfr_84,#registrationTable #cbfr_85,#registrationTable #cbfr_88,#registrationTable #cbfr_89{
+ display:none;
+}
+
 /* Error */
 .cb_result_warning {
  display:none !important;
 }
-
+/********************************/
+/*      Registration page       */
+/********************************/
+#aec-subscriptiondetails p:first-of-type{
+ display: none;
+}
+#aec-subscriptiondetails .alert p{
+ display: inherit;
+}
+#aec-subscriptiondetails .alert-info h4{
+	display:none;
+}
+#aec-subscriptiondetails .alert-info .subscription-info:first-of-type{
+	display:none;
+}
 /********************************/
 /*        A propos page         */
 /********************************/
@@ -1173,6 +1193,10 @@ text-align: center;
 /********************************/
 /*            Tools             */
 /********************************/
+.centerH{
+	width:100%;
+	text-align:center;
+}
 /*********/
 /* Icons */
 /*********/
@@ -1226,7 +1250,7 @@ input[type=text],input[type=password] {
  box-shadow: inset 1px 1px 5px black;
 }
 /* Input - submit */
-input[type=submit],button[type=submit]{
+input[type=submit],button[type=submit], .button{
  border:none;
  border-radius: 5px 0;
  padding: 3px 8px;

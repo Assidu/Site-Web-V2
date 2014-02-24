@@ -1,5 +1,38 @@
 <?php
-defined( '_JEXEC' ) or die( 'Restricted access' );
+	defined( '_JEXEC' ) or die( 'Restricted access' );
+	
+	$option = JRequest::getCmd('option', '');
+	$view = JRequest::getCmd('view', '');
+	$layout = JRequest::getCmd('layout', '');
+	$task = JRequest::getCmd('task', '');
+	$itemid = JRequest::getCmd('Itemid', '');
+	
+	if($option == 'com_users'){
+		header('Location: /site-v2_dev3/index.php/connect');
+	}
+	$user = JFactory::getUser();
+	
+	$db = & JFactory::getDBO(); 
+	if (JRequest::getCmd('view', 0) == "category") { 
+	   $idCat = JRequest::getInt('id');	      
+	}elseif(JRequest::getCmd('view', 0) == "article") { 
+		$idArt = JRequest::getInt('id');
+	}
+	/* Give Category when article display but make a db call
+	elseif (Jrequest::getCmd('view', 0) == "article") { 
+	   $temp=explode(":",JRequest::getInt('id')); 
+	   $query = "SELECT catid FROM #__content WHERE id = ".$temp[0]; 
+	   $db->setQuery( $query ); 
+	   $items  = $db->loadResult(); 
+	   //return $items; 
+	} */
+	if($option == 'com_ajax'){
+		if(JRequest::getCmd('module', '') == 'migrationv1v2'){
+     		echo '<jdoc:include type="modules" name="position-7" />';
+		}else{
+			echo 'Error in ajax module';	
+		}
+	}else{
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -48,34 +81,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
           };
         });
       });
-    </script>  
-    <?php
-    	$option = JRequest::getCmd('option', '');
-		$view = JRequest::getCmd('view', '');
-		$layout = JRequest::getCmd('layout', '');
-		$task = JRequest::getCmd('task', '');
-		$itemid = JRequest::getCmd('Itemid', '');
-
-		if($option == 'com_users'){
-			header('Location: /site-v2_dev3/index.php/connect');
-		}
-    	$user = JFactory::getUser();
-    	
-    	$db = & JFactory::getDBO(); 
-	      if (JRequest::getCmd('view', 0) == "category") { 
-	         $idCat = JRequest::getInt('id');	      
-	      }elseif(JRequest::getCmd('view', 0) == "article") { 
-	      	$idArt = JRequest::getInt('id');
-	      }
-	      /* Give Category when article display but make a db call
-	      elseif (Jrequest::getCmd('view', 0) == "article") { 
-	         $temp=explode(":",JRequest::getInt('id')); 
-	         $query = "SELECT catid FROM #__content WHERE id = ".$temp[0]; 
-	         $db->setQuery( $query ); 
-	         $items  = $db->loadResult(); 
-	         //return $items; 
-	      } */
-    ?>
+    </script> 
   </head>
   <body>
     <?php
@@ -86,6 +92,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	    $article_title = $article->get('title');
 	?>
 	<script>
+	/*
 		var fragment = document.createDocumentFragment();
 
 		var debug = document.createElement('div');
@@ -94,42 +101,42 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		var dbgJoomlaParam = document.createElement('ul');
 		dbgJoomlaParam.style.display = 'none';
 
-		var txt = document.createTextNode('Option : <?php echo $option ?>')
+		var txt = document.createTextNode('Option : <?php if($option){echo $option;} ?>')
 		var li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode('View : <?php echo $view ?>')
+		txt = document.createTextNode('View : <?php if($view){echo $view;} ?>')
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode('Layout : <?php echo $layout ?>')
+		txt = document.createTextNode('Layout : <?php if($layout){echo $layout;} ?>')
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode('Task : <?php echo $task ?>')
+		txt = document.createTextNode('Task : <?php if($task){echo $task;} ?>')
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode('Itemid : <?php echo $itemid ?>')
+		txt = document.createTextNode('Itemid : <?php if($itemid){echo $itemid;} ?>')
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode('idCat : <?php echo $idCat ?>')
+		txt = document.createTextNode('idCat : <?php if($idCat){echo $idCat;} ?>')
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode('idArt : <?php echo $idArt ?>')
+		txt = document.createTextNode('idArt : <?php if($idArt){echo $idArt;} ?>')
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
 
-		txt = document.createTextNode("titleArt : <?php echo $article_title ?>")
+		txt = document.createTextNode("titleArt : <?php if($article_title){echo $article_title;} ?>")
 		li = document.createElement('li');
 		li.appendChild(txt);
 		dbgJoomlaParam.appendChild(li);
@@ -149,7 +156,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		debug.appendChild(dbgJoomlaParam);
 		fragment.appendChild(debug);
 
-		document.body.appendChild(fragment);
+		document.body.appendChild(fragment);*/
 	</script>
 	<?php
 	 }
@@ -185,3 +192,4 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     ?>
   </body>
 </html>
+<?php } ?>
