@@ -581,46 +581,16 @@ html, body{
 /********************************/
 /*      Registration page       */
 /********************************/
-#aec-nav-profile {
-text-align: center;
-}
-#aec-nav-profile-list {
-list-style: none;
-padding: 0;
-}
-#aec-nav-profile-list li{
-display: inline-block;
-}
-#aec-subscriptiondetails>p:first-of-type{
+#aec-subscriptiondetails p:first-of-type{
  display: none;
+}
+#aec-subscriptiondetails .alert p{
+ display: inherit;
 }
 #aec-subscriptiondetails .alert-info h4{
 	display:none;
 }
-#aec-subscriptiondetails .alert-info>.subscription-info:first-of-type{
-	display:none;
-}
-#aec-subscriptiondetails .subscription-info,#aec-subscriptiondetails .mi_communitybuilder mi_1,#aec-subscriptiondetails-invoices{
-	border-radius:1em 0;
-	border:1px solid #009BD6;	
-}
-#aec-subscriptiondetails-invoices table{
-	margin: 1em;
-}
-#aec-subscriptiondetails .alert-info .subscription-info>p:first-of-type{
-	display: inline-block;
-	font-size: larger;
-	border-radius: 0 1em 1em 0;
-	padding: 0.2em 1em 0.3em 2em;
-	box-shadow: inset -2px 0px 5px rgba(0, 0, 0, 0.36);
-	color: white;
-	background-color: #009BD6;
-}
-#aec-subscriptiondetails .alert-info .subscription-info>p:last-of-type{
-	text-align: center;
-	color: #009BD6;
-}
-#aec-subscriptiondetails #box-expiration{
+#aec-subscriptiondetails .alert-info .subscription-info:first-of-type{
 	display:none;
 }
 /********************************/
@@ -1280,7 +1250,7 @@ input[type=text],input[type=password] {
  box-shadow: inset 1px 1px 5px black;
 }
 /* Input - submit */
-input[type=submit],button[type=submit], .button,#aec-nav-profile-list li a{
+input[type=submit],button[type=submit], .button{
  border:none;
  border-radius: 5px 0;
  padding: 3px 8px;
@@ -1288,12 +1258,12 @@ input[type=submit],button[type=submit], .button,#aec-nav-profile-list li a{
  color:white;
  background:#019AE0;
 }
-input[type=submit]:hover,button[type=submit]:hover,#aec-nav-profile-list li a:hover,#aec-nav-profile-list li.active a{
+input[type=submit]:hover,button[type=submit]:hover{
  color:#019AE0;
  background:white;
  cursor: pointer;
 }
-input[type=submit]:active,button[type=submit]:active,#aec-nav-profile-list li a:active{
+input[type=submit]:active,button[type=submit]:active{
  background:lightblue;
 }
 
