@@ -45,7 +45,7 @@ class modMigrationv1v2Helper
 			}					
 			if($userFound == -1){// TODO
 				return '{"typeMsg":"error","text":"Mauvais identifiants et/ou mot de passe"}';	 // TODO NLS
-	    	}else if($result[0]['migration'] == '1'){// TODO
+	    	}else if($result[0]['migration'] == '2'){// TODO
 	    		return '{"typeMsg":"error","text":"Ce compte a déjà été migré."}';	 // TODO NLS
 	    	}
 		} catch (Exception $e) {
@@ -96,6 +96,7 @@ class modMigrationv1v2Helper
     	$data.='"droitAvantMigration":"'.urlencode($result[$i]['droit']).'",';
     	$data.='"nom_jf":"'.urlencode($result[$i]['nom_jf']).'"';
     	$data.='}';
+    	modMigrationv1v2Helper::setMigration($userInfo,'1');
         return $data;
     }
     
@@ -105,15 +106,8 @@ class modMigrationv1v2Helper
      * @param array $params An object containing the module parameters
      * @access public
      */    
-    public static function setMigration($inputs)
-    {
-    	$userInfo = json_decode($inputs);
-    	if($userInfo == null){
-    		return '{"msg":"error","text":"Unable to parse JSON datas."}'; //TODO lang	
-    	}
-    	
-    	// TODO Vérifier valeur d'entré contre injection SQL
-    	
+    public static function setMigration($userInfo, $value)
+    {    	
     	try {
 	    	//Obtain a database connection
 			$db = JFactory::getDbo();
@@ -121,13 +115,12 @@ class modMigrationv1v2Helper
 			// On vérifie l'identité de l'utilisateur et si le compte n'a pas déjà été migré
 			$query = $db->getQuery(true)
 			            ->update($db->quoteName('v1_users'))
-			            ->set($db->quoteName('migration') . '=1')
+			            ->set($db->quoteName('migration').'='.$value)
 			            ->where('login = '. $db->Quote($userInfo->id));
 			$db->setQuery($query);
 			$result = $db->query();
-			return '{"typeMsg":"error","text":"Database access:\n"'.$result.'}';
     	}catch (Exception $e) {
-			return '{"typeMsg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO NLS
+			return '{"typeMsg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO NLS  et gestion ! ! !
 		}
     }
 }
