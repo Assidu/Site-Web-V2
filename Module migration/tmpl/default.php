@@ -112,6 +112,7 @@ if(ISSET($result)){
 						$('#password').focus();
 						$('#MigrationGetInfoContainer').css('display','none');
 						$('#MigrationEndContainer').css('display','block');
+						migrationAssiduV1V2 = true;
 					}
 				}
 			});
