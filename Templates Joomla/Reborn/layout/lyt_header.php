@@ -9,7 +9,7 @@
        <jdoc:include type="modules" name="TopBar-Menu-Connecte" style="none" />    
        <div class="toolBar">    
 	      <div id='Login' class='btn' >
-		    <span class='btn'>Pr&eacute;f&eacute;rences</span>
+		    <span>Pr&eacute;f&eacute;rences</span>
 		    <jdoc:include type="modules" name="TopBar-UserMenu-Connecte" style="none" />     
 	      </div>   
        </div>
