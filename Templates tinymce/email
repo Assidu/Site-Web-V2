@@ -1,0 +1,46 @@
+<div style=" width: 100%; text-align: center; background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/background.png);   ">
+	<table style=" display: inline-block;height: 100%; width: 800px; text-align: left;background: white;margin: 0 60px;border-collapse: collapse;">
+		<tr style="height:100%;">
+			<td style="height: inherit;width: 9px;background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/backgroundEndRight.png);">
+			</td>
+		 	<td>
+		 		<table style="margin: 1.5em 2.5%; padding: 0.5em 1em; width: 95%;line-height: 65px; ;border-collapse: collapse;">
+					<td style="width: 1em;background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/headerBkgLeft.png);"></td>
+		  			<td style="padding: 0.8em 0;background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/headerBkgMiddle.png);">
+		 				<img src="http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Logos/logo.png" alt="Assidu Le réseau des ingénieurs ENIBe - UTCs - IPSé - UTBM" width="256" height="62" style="border-right: 1px solid grey; margin-top: 3px; float: left;" />
+		 				<span style="font-size: x-large; margin-left: 1em; vertical-align: middle; font-family: 'book antiqua', palatino;">
+		 					Processus d'inscription
+		 				</span>
+		  			</td>
+					<td style="width: 1em;background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/headerBkgRight.png);"></td>
+				</table>
+				<div style="margin: 1em 3em;font-size: medium;">
+					<p>Bonjour [NAME],</p>
+					<p>Merci pour votre inscription sur notre site, vous pouvez désormais accéder à la partie membre à titre temporaire.</p>
+					<p>Pour accéder définitivement à nos services, il est nécessaire de valider votre compte en nous envoyant les justificatifs suivants :</p>
+					<p><span style="text-decoration: underline;">Pour un(e) étudiant(e) en PFE :</span></p>
+					<ul>
+						<li><em>Photocopie de la carte d'identité</em></li>
+						<li><em>Certificat de scolarité</em></li>
+					</ul>
+					<p><span style="text-decoration: underline;">Pour un(e) diplômé(e) :</span></p>
+					<ul>
+						<li><em>Photocopie de la carte d'identité</em></li>
+						<li><em>Photocopie du diplôme</em></li>
+					</ul>
+					<p><span style="text-decoration: underline;">Pour un(e) retraité(e) :</span></p>
+					<ul>
+						<li><em>Photocopie de la carte d'identité</em></li>
+						<li><em>Justificatif de retraite</em></li>
+					</ul>
+					<p style="text-align: left;">&nbsp;</p>
+					<p style="text-align: left;">Amicalement</p>
+					<p style="text-align: left;"><span style="font-size: large; font-family: 'comic sans ms', sans-serif;">L'équipe Assidu</span></p>
+					<p style="text-align: left;"><a href="http://www.assidu-utbm.fr">http://www.assidu-utbm.fr</a></p>
+					</p>
+		   		</div>
+		   	</td>
+			<td style="height: inherit;width: 9px;background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/backgroundEndLeft.png);"></td>
+		</tr>
+	</table>  
+</div>
