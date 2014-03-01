@@ -24,6 +24,9 @@ if(ISSET($result)){
 				<span class='label'>Mot de passe : </span><input id="MigrationFieldPwd" type="password" name="mig_pwd" class="inputbox" size="25"></input>
 				<input id="MigrationBtnGetInfo" type="submit" name="Submit" class="button" value="Récupérer mes informations">
 			</div>
+			<div id="MigrationEndContainer" style="display:none";>
+				<span>Connexion r&eacute;ussie. Pensez bien &agrave; v&eacute;rifiez que votre email est valide.</span><!-- TODO text traduction -->
+			</div>
 		</div>
 	</div>
 	<script>        
@@ -108,6 +111,7 @@ if(ISSET($result)){
 						$('#country').focus();
 						$('#password').focus();
 						$('#MigrationGetInfoContainer').css('display','none');
+						$('#MigrationEndContainer').css('display','block');
 					}
 				}
 			});
