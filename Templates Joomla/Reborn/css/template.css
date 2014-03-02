@@ -439,6 +439,13 @@ html, body{
 /********************************/
 /*       Connection page        */
 /********************************/
+.login .error{
+	margin: 0 10em;
+	text-align: justify;
+	padding: 1em;
+	border: 1px solid red;
+}
+
 .login form{
  display:block;
 }
