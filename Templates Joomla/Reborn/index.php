@@ -92,7 +92,6 @@
 	    $article_title = $article->get('title');
 	?>
 	<script>
-	/*
 		var fragment = document.createDocumentFragment();
 
 		var debug = document.createElement('div');
@@ -156,7 +155,7 @@
 		debug.appendChild(dbgJoomlaParam);
 		fragment.appendChild(debug);
 
-		document.body.appendChild(fragment);*/
+		document.body.appendChild(fragment);
 	</script>
 	<?php
 	 }
@@ -171,6 +170,12 @@
      		include 'layout/lyt_register.php';
      	} else if($task == 'login'){
      		include 'layout/lyt_login.php';
+     	} else if($task == 'saveregisters'){
+     		$title = 'Inscription';
+     		include 'layout/lyt_page.php';
+     	} else if($task == 'confirm'){
+     		$title = 'Confirmation email';
+     		include 'layout/lyt_page.php';
      	} else {
      		include 'layout/lyt_annuaire.php';
      	}
