@@ -1,4 +1,4 @@
-<div style=" width: 100%; text-align: center; background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/background.png);   ">
+<div style="width:100%; text-align:center;background-image:url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/background.png);">
 	<table style=" display: inline-block;height: 100%; width: 800px; text-align: left;background: white;margin: 0 60px;border-collapse: collapse;">
 		<tr style="height:100%;">
 			<td style="height: inherit;width: 9px;background-image: url(http://www-dev.assidu-utbm.fr/site-v2_dev3/images/Emails/backgroundEndRight.png);">
