@@ -34,9 +34,7 @@
 	    			emailavie = emailavie.sansAccent();
 	    			emailavie = emailavie.replace(/ /g, '.');
 					$('#username')[0].value = emailavie;
-					$('#username').focus();
 			}
-			this.focus();
 	    };
         $("document").ready(function (e) {
 			$('#firstname').keyup(determineIdentifiant);
