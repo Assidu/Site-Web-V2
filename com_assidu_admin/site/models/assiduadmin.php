@@ -20,26 +20,43 @@ class AssiduAdminModelAssiduAdmin extends JModelItem
          * Get the message
          * @return string The message to be displayed to the user
          */
-        public function getMsg() 
+        public function getTitle(){
+            if (!isset($this->title)) {
+ 				$this->title = JText::_('COM_ASSIDU_ADMIN_TITLE');
+        	}
+        	return $this->title;
+        }
+ 
+        /**
+         * Get the message
+         * @return string The message to be displayed to the user
+         */
+        public function getMenu() 
         {
-                if (!isset($this->msg)) 
+                if (!isset($this->menu)) 
                 {
  
                         $jinput = JFactory::getApplication()->input;
-                        $id     = $jinput->get('id', 1, 'INT');
+                        $id     = $jinput->get('access', 1, 'INT');
  
                         switch ($id) 
                         {
+                        case 3:
+                                $this->menu  = '<a class="button">'.JText::_('COM_ASSIDU_ADMIN_BUTTON_MOD_INSCRIPTION').'</a>';
+                                $this->menu .= '<a class="button">'.JText::_('COM_ASSIDU_ADMIN_BUTTON_MOD_PORTRAIT').'</a>';
+                                $this->menu .= '<a class="button">'.JText::_('COM_ASSIDU_ADMIN_BUTTON_MOD_ANTENNES').'</a>';
+                                $this->menu .= '<a class="button">'.JText::_('COM_ASSIDU_ADMIN_BUTTON_STATS').'</a>';
+                        break;
                         case 2:
-                                $this->msg = 'COM_ASSIDU_ADMIN_VIEW_DEFAULT_FIELD_GREETING_VALUE_2';
+                                $this->menu = '<span class="notification info">'.JText::_('COM_ASSIDU_ADMIN_INDEV').'</span>';
                         break;
                         default:
                         case 1:
-                                $this->msg = 'COM_ASSIDU_ADMIN_VIEW_DEFAULT_FIELD_GREETING_VALUE_1';
+                                $this->menu = '<span class="notification error">'.JText::_('COM_ASSIDU_ADMIN_DENIED').'</span>';
                         break;
                         }
                 }
-                return $this->msg;
+                return $this->menu;
         }
 }
 

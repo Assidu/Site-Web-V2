@@ -165,7 +165,9 @@
      // Display Content
      if($option == 'com_content'){
      	include 'layout/lyt_' . $view . '.php';
-     }else if($option == 'com_comprofiler' ){
+     } else if($option == 'com_assidu_admin'){
+     	include 'layout/lyt_assidu_admin.php';
+     } else if($option == 'com_comprofiler' ){
      	if($task == 'registers'){
      		include 'layout/lyt_register.php';
      	} else if($task == 'login'){

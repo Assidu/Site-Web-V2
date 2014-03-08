@@ -16,7 +16,8 @@ class AssiduAdminViewAssiduAdmin extends JViewLegacy
         function display($tpl = null) 
         {
 				// Assign data to the view
-                $this->msg = $this->get('Msg');
+                $this->title = $this->get('Title');
+                $this->menu = $this->get('Menu');
  
                 // Check for errors.
                 if (count($errors = $this->get('Errors'))) 

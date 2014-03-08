@@ -610,6 +610,49 @@ display: inline-block;
 	display:none;
 }
 /********************************/
+/*        Assidu admin         */
+/********************************/
+#AssiduAdmin {
+	margin: -17em 0% 0;
+}
+#AssiduAdmin h1{
+	margin: 0;
+	padding: 0.5em;
+	text-align: center;
+	border: 1px solid grey;
+	box-shadow: inset 0px 2px 10px grey;
+	background: lightsalmon;
+}
+#AssiduAdmin .page{
+	padding: 1em;
+	text-align: center;
+}
+
+#AssiduAdmin .button {
+	display: inline-block;
+	margin: 1em;
+	padding: 1em;
+	font-size: x-large;
+	cursor: pointer;
+	border-radius: 1em 0;
+	border: 1px solid grey;
+}
+#AssiduAdmin .notification { /* TODO GENERIC */
+	display: inline-block;
+	border: 1px solid;
+	font-size: -webkit-xxx-large;
+	margin-top: 1em;
+	padding: 0.2em 0.5em;
+	border-radius: 0.5em 0;
+}
+#AssiduAdmin .error {
+	color: lightcoral;
+}
+#AssiduAdmin .info {
+	color: lightslategrey;
+}
+
+/********************************/
 /*        A propos page         */
 /********************************/
 #Content .part{
