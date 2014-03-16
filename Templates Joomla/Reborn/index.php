@@ -7,8 +7,8 @@
 	$task = JRequest::getCmd('task', '');
 	$itemid = JRequest::getCmd('Itemid', '');
 	
-	if($option == 'com_users'){
-		header('Location: /site-v2_dev3/index.php/connect');
+	if($option == 'com_users'){ /* pourquoi on fait ça déjà ?? */
+		header('Location: /Beta/index.php/connect'); /* TODO non static */
 	}
 	$user = JFactory::getUser();
 	

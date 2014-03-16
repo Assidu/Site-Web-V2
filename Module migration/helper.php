@@ -12,13 +12,21 @@ class modMigrationv1v2Helper
      * @param array $params An object containing the module parameters
      * @access public
      */    
-    public static function initMigration($inputs)
+    public static function initMigrationAjax()
     {
-    	$userInfo = json_decode($inputs);
-    	if($userInfo == null){
-    		return '{"msg":"error","text":"Unable to parse JSON datas."}'; //TODO lang	
-    	}
-    	
+		// Get module parameters
+		jimport('joomla.application.module.helper');
+		$inputs  = JFactory::getApplication()->input;
+		$inputs = $inputs->get('data',null,'ARRAY');
+    	if($inputs['id'] == null){
+    		return '{"typeMsg":"error","text":"You need to enter an id."}'; //TODO lang	
+    	} else if($inputs['pwd'] == null){
+    		return '{"typeMsg":"error","text":"You need to enter a password"}'; //TODO lang	
+    	}else {
+    		$userInfo = new stdClass();;
+    		$userInfo->id = $inputs['id'];
+    		$userInfo->pwd = $inputs['pwd'];
+    	}    	
     	// TODO Vérifier valeur d'entré contre injection SQL
     	
     	try {
@@ -44,12 +52,12 @@ class modMigrationv1v2Helper
 				}
 			}					
 			if($userFound == -1){// TODO
-				return '{"typeMsg":"error","text":"Mauvais identifiants et/ou mot de passe"}';	 // TODO NLS
+				return '{"typeMsg":"error","text":"Mauvais identifiant et/ou mot de passe."}';	 // TODO NLS
 	    	}else if($result[0]['migration'] == '2'){// TODO
 	    		return '{"typeMsg":"error","text":"Ce compte a déjà été migré."}';	 // TODO NLS
 	    	}
 		} catch (Exception $e) {
-			return '{"typeMsg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO NLS
+			return '{"typeMsg":"error","text":"Database access error:"}'; //   \n'.$e->getMessage().'"}';	 // TODO NLS
 		}
 
 		// Tempory return values

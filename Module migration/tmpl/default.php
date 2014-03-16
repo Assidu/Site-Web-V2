@@ -8,7 +8,7 @@ if(ISSET($result)){
  ?>
 	<div class="migration"> <!-- TODO fichier langue & urlbase from server-->
 		<span>Si vous &eacute;tiez inscrit sur l'ancien site, vous devez d'abord </span>
-		<a id="MigrationBtnLogin" href="http://www-dev.assidu-utbm.fr/site-v2_dev3/index.php/inscription" >migrer votre compte.</a>
+		<a id="MigrationBtnLogin" href="http://www-dev.assidu-utbm.fr/Beta/index.php/register" >migrer votre compte.</a>
 	</div>  
 <?php
 } else if($task == 'registers'){
@@ -42,20 +42,23 @@ if(ISSET($result)){
 	  	var migrationGetInfo = $('#MigrationBtnGetInfo');  	
 	  	migrationGetInfo.click(function() {
 	  		var userInfo = {
-	  				id:$('#MigrationFieldId')[0].value,
-	  				pwd:$('#MigrationFieldPwd')[0].value
+	  				'id':$('#MigrationFieldId')[0].value,
+	  				'pwd':$('#MigrationFieldPwd')[0].value
 	  		};
-	  		userInfo = JSON.stringify(userInfo);
+	  		var request = {
+	  				'option' : 'com_ajax',
+					'module' : 'migrationv1v2',
+					'method' : 'initMigration',
+					'data'   : userInfo,
+					'format' : 'json'
+	  		};
 			$.ajax({
-				url:'http://www-dev.assidu-utbm.fr/site-v2_dev3',
-				data:{
-					option:'com_ajax',
-					module:'migrationv1v2',
-					method:'init',
-					data : userInfo
-				},
-				success:function(data){
-					data = $.parseJSON(data);
+				type : 'GET',
+				url:'http://www-dev.assidu-utbm.fr/Beta/index.php', /* TODO non static */
+				data:request,
+				dataType: 'json',
+				success:function(response){
+					var data = $.parseJSON(response.data);
 					if(data.typeMsg == 'error'){
 						var error = document.createElement('span');
 						error.setAttribute('class','message error');
@@ -118,6 +121,7 @@ if(ISSET($result)){
 			});
 	  	});	
 	  	
+/* TODO action lors de l'inscription
 	  	var registerBtn = $('#registrationTable .button')[0];
 	  	registerBtn.click(function(e){
 	  		alert('TODO migration process ! ! !');
@@ -127,7 +131,7 @@ if(ISSET($result)){
 	  		};
 	  		userInfo = JSON.stringify(userInfo);
 			$.ajax({
-				url:'http://www-dev.assidu-utbm.fr/site-v2_dev3',
+				url:'http://www-dev.assidu-utbm.fr/Beta/index.php', // TODO non static
 				data:{
 					option:'com_ajax',
 					module:'migrationv1v2',
@@ -144,7 +148,7 @@ if(ISSET($result)){
 	  		e.preventDefault();
 	  		//assidu.mysqlDB.get('toto',testMigration);
 	  		//loginBtn.click();
-	  	});
+	  	});*/
 	  });
 	</script>
 <?php
