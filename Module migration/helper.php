@@ -60,13 +60,11 @@ class modMigrationv1v2Helper
 			return '{"typeMsg":"error","text":"Database access error:"}'; //   \n'.$e->getMessage().'"}';	 // TODO NLS
 		}
 
-		// Tempory return values
     	$data ='{';
     	$data.='"typeMsg":"data",';
     	$data.='"nom":"'.urlencode($result[$i]['nom']).'",';
     	$data.='"prenom":"'.urlencode($result[$i]['prenom']).'",';
     	$data.='"surnom":"'.urlencode($result[$i]['surnom']).'",';
-    	$data.='"typecompte":"'.urlencode($result[$i]['nom']).'",'; // TODO
     	$data.='"ecole":"'.urlencode($result[$i]['ecole']).'",';
     	$data.='"identifiant":"'.urlencode($result[$i]['emailavie']).'",';
     	$data.='"promo":"'.urlencode($result[$i]['promo']).'",';
@@ -108,6 +106,28 @@ class modMigrationv1v2Helper
         return $data;
     }
     
+    /**
+    * Retrieves the hello message
+    *
+    * @param array $params An object containing the module parameters
+    * @access public
+    */    
+    public static function migrateAjax()
+    {
+    	// Get module parameters
+		jimport('joomla.application.module.helper');
+		$inputs  = JFactory::getApplication()->input;
+		$inputs = $inputs->get('data',null,'ARRAY');
+    	if($inputs['id'] == null){
+    		$returnValue = '{"typeMsg":"error","text":"Error, bad user id."}'; //TODO lang	
+    	} else{
+    		$userInfo = new stdClass();;
+    		$userInfo->id = $inputs['id'];
+    		$returnValue = modMigrationv1v2Helper::setMigration($userInfo,'2');
+    	}
+    	return $returnValue;
+    }
+    
      /**
      * Retrieves the hello message
      *
@@ -130,6 +150,7 @@ class modMigrationv1v2Helper
     	}catch (Exception $e) {
 			return '{"typeMsg":"error","text":"Database access error:\n"'.$e->getMessage().'}';	 // TODO NLS  et gestion ! ! !
 		}
+		return '{"typeMsg":"ok","text":"Migration done."}';
     }
 }
 ?>

@@ -521,7 +521,7 @@ html, body{
 }
 
 #registrationTable {
- width:400px !important;
+ width:420px !important;
  margin:auto !important;
 }
 
@@ -531,7 +531,7 @@ html, body{
 }
 
 #registrationTable .titleCell {
- width: 125px;
+ width: 130px;
  text-align:right;
 }
 
@@ -556,7 +556,7 @@ html, body{
  margin-bottom: 2em;
 }
 
-#registrationTable #cbcbfr_58,#registrationTable #cbfr_58,#registrationTable #cbfr_60,#registrationTable #cbfr_61,#registrationTable #cbfr_66,#registrationTable #cbfr_77,#registrationTable #cbfr_92,#registrationTable #cbfr_70,#registrationTable #cbfr_71,#registrationTable #cbfr_72,#registrationTable #cbfr_73,#registrationTable #cbfr_74,#registrationTable #cbfr_75,#registrationTable #cbfr_30,#registrationTable #cbfr_64,#registrationTable #cbfr_65,#registrationTable #cbfr_76,#registrationTable #cbfr_91,#registrationTable #cbfr_93,#registrationTable #cbfr_34,#registrationTable #cbfr_67,#registrationTable #cbfr_68,#registrationTable #cbfr_69,#registrationTable #cbfr_82,#registrationTable #cbfr_83,#registrationTable #cbfr_84,#registrationTable #cbfr_85,#registrationTable #cbfr_88,#registrationTable #cbfr_89{
+#registrationTable #cbcbfr_87,#registrationTable #cbfr_88,#registrationTable #cbfr_89,#registrationTable #cbfr_70,#registrationTable #cbfr_71,#registrationTable #cbfr_72,#registrationTable #cbfr_73,#registrationTable #cbfr_74,#registrationTable #cbfr_75,#registrationTable #cbfr_76,#registrationTable #cbfr_63,#registrationTable #cbfr_64,#registrationTable #cbfr_65,#registrationTable #cbfr_66,#registrationTable #cbfr_67,#registrationTable #cbfr_68,#registrationTable #cbfr_69,#registrationTable #cbfr_60,#registrationTable #cbfr_78,#registrationTable #cbfr_34,#registrationTable #cbfr_79,#registrationTable #cbfr_80,#registrationTable #cbfr_81,#registrationTable #cbfr_62,#registrationTable #cbfr_58,#registrationTable #cbfr_57,#registrationTable #cbfr_82,#registrationTable #cbfr_77,#registrationTable #cbfr_87{
  display:none;
 }
 
