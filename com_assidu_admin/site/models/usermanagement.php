@@ -9,7 +9,7 @@ jimport('joomla.application.component.modelitem');
 /**
  * AssiduAdmin Model
  */
-class AssiduAdminModelAssiduAdmin extends JModelItem
+class AssiduAdminModelUserManagement extends JModelItem
 {
         /**
          * @var string msg

@@ -6,7 +6,7 @@
 	<copyright>(C) 2014 Assidu-NFC. All rights reserved.</copyright>
 	<authorEmail>contact@assidu-utbm.fr</authorEmail>
 	<authorUrl>www.assidu-utbm.fr</authorUrl>
-	<version>0.0.10</version>
+	<version>0.0.11</version>
 	<description>COM_ASSIDU_ADMIN_DESCRIPTION</description>
 
 	<!-- Database update -->
