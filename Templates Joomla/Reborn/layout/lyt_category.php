@@ -1,4 +1,6 @@
-<?php if($idCat == '9'){ ?>
+	<?php include 'lyt_topbar.php'; ?> 
+
+	<?php if($idCat == 10 /*'9'*/){ ?>
 	<script>
     /* Init of the banner news scripts */
     $("document").ready(function (e) {
@@ -36,29 +38,15 @@
 			timer = launchTimer();
 		});
     });
-</script>
+	</script>
     <div id="BannerNews">
       <div id="BannerNewsLeft" class="btn"></div>
       <jdoc:include type="modules" name="BannerNews" />
       <div id="BannerNewsRight" class="btn"></div>
     </div>
-    <div id="Content">
-      <div id="LeftModules">
-      	<div class="partners dug" style="overflow:hidden;">
-      		<h2>Partenaires</h2>
-      		<img src="/site-v2_dev3/images/partenaires/ae.jpg" />
-      		<img src="/site-v2_dev3/images/partenaires/logoUTBM.jpg" />
-      		<img src="/site-v2_dev3/images/partenaires/LogoBelfort.jpg" />
-      		<img src="/site-v2_dev3/images/partenaires/conseil general belfort.jpg" />
-      		<img src="/site-v2_dev3/images/partenaires/montbeliard.jpg" />
-      	</div>
-      </div>
-      <div id="RightModules">
-      	<jdoc:include type="component" />
-      </div>
-    </div>
-	<?php } else { ?>
-    <div id="Content">
-      	<jdoc:include type="component" />
-    </div>
 	<?php } ?>
+	
+	<section id="Page">
+	    <jdoc:include type="component" />
+	    <?php include 'lyt_footer.php';  ?>
+    </section>    

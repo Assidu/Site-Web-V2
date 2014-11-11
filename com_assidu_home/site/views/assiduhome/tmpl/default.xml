@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ASSIDU_HOME_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_ASSIDU_HOME_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="access"
+				type="list"
+				label="COM_ASSIDU_HOME_VIEW_DEFAULT_FIELD_ACCESS_LABEL"
+				description="COM_ASSIDU_HOME_VIEW_DEFAULT_FIELD_ACCESS_DESC"
+				default="1">
+				<option value="1">COM_ASSIDU_HOME_VIEW_DEFAULT_FIELD_ACCESS_OPTION_1</option>
+				<option value="2">COM_ASSIDU_HOME_VIEW_DEFAULT_FIELD_ACCESS_OPTION_2</option>
+				<option value="3">COM_ASSIDU_HOME_VIEW_DEFAULT_FIELD_ACCESS_OPTION_3</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

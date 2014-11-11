@@ -8,7 +8,7 @@ if(ISSET($result)){
  ?>
 	<div class="migration"> <!-- TODO fichier langue & urlbase from server-->
 		<span>Si vous &eacute;tiez inscrit sur l'ancien site, vous devez d'abord </span>
-		<a id="MigrationBtnLogin" href="http://www-dev.assidu-utbm.fr/Beta/index.php/register" >migrer votre compte.</a>
+		<a id="MigrationBtnLogin" href="http://www-dev.assidu-utbm.fr/Beta/index.php?option=com_comprofiler&task=registers&Itemid=120" >migrer votre compte.</a>
 	</div>  
 <?php
 } else if($task == 'registers'){

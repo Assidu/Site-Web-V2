@@ -1,3 +1,5 @@
-    <div id="Content">
-          <jdoc:include type="component" />
-    </div>
+    <?php include 'lyt_topbar.php'; ?> 
+    <section id="Page">
+        <jdoc:include type="component" />
+		<?php include 'lyt_footer.php';  ?>
+    </section>

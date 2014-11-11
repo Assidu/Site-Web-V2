@@ -1,0 +1,162 @@
+/***********************************************************
+* Template for common zone of reborn template for ASSIDU 
+*
+* @author: Thomas HUGUENIN
+* #copyright: Assidu, All rights reserved (2013)
+************************************************************/
+
+/*------------------------------*/
+/*      Static structure        */
+/*------------------------------*/
+html, body{
+ height:100%;
+ margin:0;
+ padding:0;
+}
+
+/*------------------------------*/
+/*            html UI           */
+/*------------------------------*/
+/* Input - submit */
+input[type=submit],button[type=submit],.btn{
+	border-radius: 5px 0;
+	padding: 3px 8px;
+	border: 1px solid #019AE0;
+	color:white;
+	background:#019AE0;
+	text-decoration: none;
+}
+input[type=submit]:hover,button[type=submit]:hover,.btn:hover{
+	color:#019AE0;
+	background:white;
+	cursor: pointer;
+}
+input[type=submit]:active,button[type=submit]:active,.btn:active{
+	background:lightblue;
+}
+
+/*------------------------------*/
+/*         Backgrounds          */
+/*------------------------------*/
+.background-tile{
+	background-position:center;
+	background-size:cover;
+	height: 100%;
+	left:0;
+	position: fixed;
+	right: 0;
+	top:0;
+}
+/*------------------------------*/
+/*            Titles            */
+/*------------------------------*/
+#Page .page-header{
+	margin: 0.5em -0.5em 1em;
+	background: #0096AE;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+}
+#Page .page-header h2{
+	text-align: center;
+	margin: 0;
+	padding: 0.2em;
+	position: relative;
+	border: 1px solid #00434D;
+	text-shadow: 1px 1px 3px rgb(21, 21, 21);
+}
+#Page .page-header h2:before{
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-left: 0.3em solid transparent;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+#Page .page-header h2:after{
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-right: 0.3em solid transparent;
+	position: absolute;
+	top: 100%;
+	right: 0;
+}
+
+/*------------------------------*/
+/*     Content - Presentation   */
+/*------------------------------*/
+.mot-pres{
+	background: whitesmoke;
+	box-shadow: inset 1px 1px 10px lightgrey;
+	padding: 1em;
+	min-height: 9em;
+}
+.mot-pres .author{
+	float: left;
+	width: 7em;
+	text-align: center;
+}
+.mot-pres .author img{
+	width: 6em;
+	height: 6em;
+	border-radius: 3em;
+}
+.mot-pres .author h4{
+	margin:0;
+}
+.mot-pres p{
+	font-size: 1.5em;
+	margin-left: 5em;
+}
+/*------------------------------*/
+/*          Utilities           */
+/*------------------------------*/
+.center-in-div-1{
+	display: table;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	text-align: center;
+	z-index: 10;
+	top: 0px;
+}
+.center-in-div-2{
+	top: 50%;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	position: static;
+}
+.center-in-div-3{
+	top: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	position: static;
+}
+.center-in-div-panel{
+	display: inline-block;
+}
+
+/********************************/
+/*         DEBUG PANEL          */
+/********************************/
+#debug {
+	position: fixed;
+	top: 300px;
+	right: 0;
+	background: grey;
+	z-index: 100000000000;
+	border:1px solid black;
+	border-radius:10px 0 0 10px;
+}
+#debug div{
+	padding:0.5em;
+	text-align:center;
+	cursor:pointer;
+}
+#debug ul{
+	list-style:none;
+	padding:10px;
+	margin:0;
+}

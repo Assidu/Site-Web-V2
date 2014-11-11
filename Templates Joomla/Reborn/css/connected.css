@@ -1,0 +1,618 @@
+/***********************************************************
+* Template for conected style of reborn template for ASSIDU 
+*
+* @author: Thomas HUGUENIN
+* #copyright: Assidu, All rights reserved (2014)
+************************************************************/
+
+/********************************/
+/*      Static structure        */
+/********************************/
+html, body{
+ background: black url("../images/dark-pattern.png") bottom center;
+}
+
+/**********/
+/* Header */
+/**********/
+#TopBar{
+ position:fixed;
+ top:0;
+ width: 100%;
+ height: 3em;
+ display:block;
+ text-align:center;
+ background-color: white;
+ box-shadow: 0px 0px 5px 0px black;
+ border-bottom: 1px solid darkgrey;
+ z-index: 10;
+}
+
+#TopBar .logo{
+ position:absolute;
+ display:block;
+ margin-left: 1%;
+ height: 3em;
+}
+
+/* Main menu */ /* TODO migrer vers css unique pour tout les menus */
+#TopBar .mainmenu{
+ display: inline-block;
+ margin: 0;
+ padding: 0;
+ z-index: 1000000000000;
+}
+#TopBar .nav-child,#TopBar .prefmenu{
+ padding-left:0;
+ display:none;
+ position:absolute;
+}
+#TopBar .mainmenu li:hover > .nav-child{
+ display:block;
+}
+#TopBar .menu li{
+ float: left;
+ position: relative;
+ list-style-type: none;
+}
+#TopBar .nav-child li, #TopBar .prefmenu li {
+ float: none;
+ text-align: center;
+}
+#TopBar .menu li a{
+	display: block;
+	margin: -2px 0px 0px;
+	padding: 1.5em 0.5em 0.5em;
+	text-decoration: none;
+	border-left: 1px solid lightgrey;
+	color: rgb(115, 115, 115);
+}
+#TopBar .menu li:last-child a{ border-right: 1px solid lightgrey;}
+#TopBar .mainmenu li a:hover{
+	text-decoration:underline;
+}
+#TopBar .mainmenu .active a{
+ color: white;
+ background: #66b6fc;
+}
+#TopBar .mainmenu .nav-child a, #TopBar .prefmenu li a{
+ padding: 0.5em;
+ margin: 0;
+ min-width: 100%;
+ color: black;
+ background: rgba(255, 255, 255, 0.9);
+}
+#TopBar .mainmenu .nav-child a:hover, #TopBar .prefmenu li a:hover {
+ color:white;
+ background: rgba(0, 155, 214, 0.90);
+}
+#TopBar .mainmenu .nav-child .size1 { /* Special size for menu career */
+ width: 120px;
+}
+
+/* User preferences menu */
+#TopBar .toolBar {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 3em;
+	color: grey;
+}
+#TopBar .toolBar .btn {
+	display: inline-block;
+	cursor: pointer;
+	height: 2em;
+	padding: 1em 0.5em 0em;
+	color: grey;
+	border-color: grey;
+	border-radius: initial;
+	border-style: solid;
+	border-width: 0 0 0 1px;
+	background: transparent;
+}
+#TopBar .prefmenu{
+	right: 1.1em;
+	margin: 0.9em 0 0;
+}
+#Login:hover{
+	color:#1C9DD6;
+}
+#Login:hover > .prefmenu{
+ display:block;
+}
+
+/*------------------------------*/
+/*           Content            */
+/*------------------------------*/
+#Page {
+	position: absolute;
+	top: 6.5em;
+	margin: 0em 10em;
+	background: white;
+	border: 1px solid;
+	box-shadow: 0 0 2em 0.2em black;
+	left: 0;
+	right: 0;
+}
+
+/*------------------------------*/
+/*     Content - pagination     */
+/*------------------------------*/
+.pagination .counter {
+	display: none;
+}
+.pagination ul{
+	list-style: none;
+	padding: 0 0 1em 0;
+	text-align: center;
+	margin: 0;
+}
+.pagination li {
+	display: inline-block;
+	margin: 0 0.4em;
+}
+.pagination li span {
+	color: grey;
+}
+.pagination li a {
+	color: grey;
+	text-decoration: none;
+	color: #009BD6;
+}
+.pagination li a:hover{
+	text-decoration: underline;
+}
+
+/*------------------------------*/
+/*       Content - article      */
+/*------------------------------*/
+#Page .item-page .item-image{
+	text-align:center;
+}
+#Page .item-page .item-image img{
+	max-width:100%;
+}
+#Page .item-page .page-header{
+	margin: 0.5em -0.5em 1em;
+	background: #0096AE;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+}
+#Page .item-page .page-header h2{
+	text-align: center;
+	margin: 0;
+	padding: 0.2em;
+	position: relative;
+	border: 1px solid #00434D;
+	text-shadow: 1px 1px 3px rgb(21, 21, 21);
+}
+#Page .item-page .page-header h2:before{
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-left: 0.3em solid transparent;
+	position: absolute;
+	top: 1.6em;
+	left: 0;
+}
+#Page .item-page .page-header h2:after{
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-right: 0.3em solid transparent;
+	position: absolute;
+	top: 1.6em;
+	right: 0;
+}
+#Page .item-page .btn-group {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 10em;
+}
+#Page .item-page .btn-group .btn{
+	display: none;
+}
+#Page .item-page .btn-group .actions{
+	padding:0;
+}
+#Page .item-page .btn-group .actions li {
+	background: white;
+	margin: 1em 1em 1em 0;
+	border-radius: 0 1em 1em 0;
+	padding: 0.3em 0.5em;
+	box-shadow: inset -1px 0px 6px black;
+}
+#Page .item-page .btn-group .actions li a{
+	text-decoration:none;
+	color:black;
+}
+#Page .item-page .btn-group .actions li a:hover{
+	text-decoration:underline;
+	color:#019AE0;
+}
+#Page .item-page p{
+	margin: 1em;
+	text-align: justify;
+}
+
+/*------------------------------*/
+/*      Content - category      */
+/*------------------------------*/
+#Page .blog{
+	background: lightgrey;
+}
+#Page .blog .items-row {
+	width: 100%;
+	padding: 1em 0.8em;
+	box-sizing: border-box;
+}
+#Page .blog .span12 {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	border: 1px solid;
+	position: relative;
+	background: white;
+	transition: 0.5s;
+}
+#Page .blog .span12:hover{
+	box-shadow: 0px 0px 1em black;
+}
+#Page .blog .span12  .page-header{
+	margin: 0.5em -0.5em 1em;
+	background: lightblue;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+}
+#Page .blog .span12  .page-header h2{
+	text-align: center;
+	margin: 0;
+	padding: 0.2em;
+	position: relative;
+}
+#Page .blog .span12  .page-header h2:before{
+	content: '';
+	border-top: 0.5em solid rgb(72, 109, 121);
+	border-left: 0.3em solid transparent;
+	position: absolute;
+	top: 1.6em;
+	left: 0;
+}
+#Page .blog .span12  .page-header h2:after{
+	content: '';
+	border-top: 0.5em solid rgb(72, 109, 121);
+	border-right: 0.3em solid transparent;
+	position: absolute;
+	top: 1.6em;
+	right: 0;
+}
+#Page .blog .items-row:nth-child(4n+0) .span12 .page-header h2{background-color:#71B450;border: 1px solid #29421D;}
+#Page .blog .items-row:nth-child(4n+1) .span12 .page-header h2{background-color:#6C4895;border: 1px solid #372052;}
+#Page .blog .items-row:nth-child(4n+2) .span12 .page-header h2{background-color:#0096AE;border: 1px solid #00434D;}
+#Page .blog .items-row:nth-child(4n+3) .span12 .page-header h2{background-color:#DC3E34;border: 1px solid #5E1C18;}
+#Page .blog .items-row:nth-child(4n+0) .span12  .page-header h2:before,#Page .blog .items-row:nth-child(4n+0) .span12  .page-header h2:after{border-top-color:#29421D;}
+#Page .blog .items-row:nth-child(4n+1) .span12  .page-header h2:before,#Page .blog .items-row:nth-child(4n+1) .span12  .page-header h2:after{border-top-color:#372052;}
+#Page .blog .items-row:nth-child(4n+2) .span12  .page-header h2:before,#Page .blog .items-row:nth-child(4n+2) .span12  .page-header h2:after{border-top-color:#00434D;}
+#Page .blog .items-row:nth-child(4n+3) .span12  .page-header h2:before,#Page .blog .items-row:nth-child(4n+3) .span12  .page-header h2:after{border-top-color:#5E1C18;}
+#Page .blog .span12 .item p{
+	text-align: justify;
+}
+#Page .blog .span12 .icons{
+	display:none;
+}
+#Page .blog .span12 .item-image{
+	float:left;
+	width:10em;
+	margin-right: 1em;
+	margin-left: 0.3em;
+}
+#Page .blog .span12 .item-image img{
+	max-width: 10em;
+	max-height: 10em;
+}
+#Page .blog .span12 .item .readmore {
+	clear: both;
+	text-align: center;
+}
+#Page .blog .span12 .item .readmore .btn{
+	background: transparent;
+	border-color: grey;
+	color: grey;
+}
+#Page .blog .span12 .item .readmore .btn:hover{
+	background: transparent;
+	border-color: #019AE0;
+	color:#019AE0;
+}
+
+/*------------------------------*/
+/*           Annuaire           */
+/*------------------------------*/
+.cbUsersList {
+	width: 100%;
+}
+#cbUsersListInner {
+	padding: 0;
+}
+#cbUsersListInner hr{
+	display:none;
+}
+
+/*------------------------------*/
+/*        Annuaire - list       */
+/*------------------------------*/
+#cbUsersListInner .cbUserListHeadTitle .contentheading{
+	text-align: center;
+	font-size: 2em;
+	padding: 0.2em;
+	position: relative;
+	border: 1px solid #00434D;
+	text-shadow: 1px 1px 3px rgb(21, 21, 21);
+	margin: 0.5em -0.5em 1em;
+	background: #0096AE;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+}
+#cbUsersListInner .cbUserListHeadTitle .contentheading:before{
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-left: 0.3em solid transparent;
+	position: absolute;
+	top: 1.6em;
+	left: 0;
+}
+#cbUsersListInner .cbUserListHeadTitle .contentheading:after{
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-right: 0.3em solid transparent;
+	position: absolute;
+	top: 1.6em;
+	right: 0;
+}
+#cbUsersListInner .cbUserListHeadTitle .cbUserListChanger {
+	float: initial;
+	width: initial;
+	position: absolute;
+	top: 6em;
+	right: 1em;
+}
+#cbUsersListInner .cbUserListHeadTitle .contentdescription{
+	padding-left:1em;
+}
+#cbUserTable thead tr th{
+	color: white;
+	background: #82B5BD;
+}
+#cbUserTable tr:nth-child(2n+0){
+	color: white;
+	background: #B6B6B6;
+}
+#cbUserTable tr:nth-child(2n+0) a{
+	color: white;
+	text-decoration: none;
+}
+#cbUserTable tr:nth-child(2n+1){
+	color: black;
+	background: #EAEAEA;
+}
+#cbUserTable tr:nth-child(2n+1) a{
+	color: black;
+	text-decoration: none;
+}
+#cbUserTable tr:hover{
+	color:#009BD6;
+	background:white;
+}
+#cbUserTable tr:hover a{
+	color:#009BD6;
+}
+#cbUserTable tr td{
+	text-align: center;
+	vertical-align: middle;
+}
+#cbUserTable .cbUserListFC_avatar .cbThumbPict {
+	max-width: 3em;
+	max-height: 3em;
+}
+
+/*------------------------------*/
+/*       Annuaire - profil      */
+/*------------------------------*/
+#cbProfileInner{
+	padding:0;
+}
+#cbProfileInner .cbPosHead{
+	padding: 0.5em;
+	position: relative;
+	border: 1px solid #00434D;
+	text-shadow: 1px 1px 3px rgb(21, 21, 21);
+	margin: 1em -2em 2em;
+	background: #0096AE;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+}
+#cbProfileInner .cbPosHead:before{
+	content: '';
+	border-top: 1.5em solid #00434D;
+	border-left: 1.9em solid transparent;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+#cbProfileInner .cbPosHead:after{
+	content: '';
+	border-top: 1.5em solid #00434D;
+	border-right: 1.8em solid transparent;
+	position: absolute;
+	top: 100%;
+	right: 0;
+}
+#cbProfileInner .cbPosHead .cb_tab_content{
+	width: initial;
+	display: inline-block;
+	vertical-align: middle;
+}
+#cbProfileInner .cbPosHead .cb_tab_content .cbavatar_tr  .cbFullPict{
+	max-width:10em;
+	max-height: 10em;
+}
+#cbProfileInner .cbPosHead .cb_tab_content .cbft_formatname {
+	font-size: 2em;
+}
+#MenuGaucheProfil{
+	position: fixed;
+	left: 0;
+	top: 10em;
+	padding: 0;
+	margin: 0;
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList {
+	position: fixed;
+	left: 0;
+	top: 13.5em;
+}
+#MenuGaucheProfil li,
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenuItem{
+	margin-bottom: 5px;
+	overflow: hidden;
+	width: 4.5em;
+	height: 3em;
+	padding-left: 12px;
+	margin-left: -14px;
+	box-sizing: border-box;
+	background: white;
+	border-radius: 0 2em 2em 0;
+	box-shadow: inset 0px 0px 14px black;
+}
+#MenuGaucheProfil li:hover,
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenuItem:hover {
+	box-shadow: 0 0 15px 2px white;
+}
+#MenuGaucheProfil li a{
+	display:block;
+	height: 100%;
+	background-image: url('../images/ic_annuaire_plans.svg');
+	background-repeat: no-repeat;
+	background-position-x: 0.8em;
+	background-position-y: center;
+}
+#MenuGaucheProfil li a:hover{
+	background-image: url('../images/ic_annuaire_plans_hover.svg');
+}
+#MenuGaucheProfil li a,
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenuItem a{
+	padding-left: 70px;
+	height: 100%;
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_REPORTUSER a{
+	background-position-y: 0;	
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_REPORTUSER a:hover{
+	background-position-y: -75px;	
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_MENU_SENDUSEREMAIL a {
+	background-position-y: -130px;	
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_MENU_SENDUSEREMAIL a:hover {
+	background-position-y: -190px;	
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_UPDATEPROFILE a {
+	background-position-y: -250px;	
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_UPDATEPROFILE a:hover {
+	background-position-y: -310px;	
+}
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_TEAMCREDITS_CB,
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_MENU_VIEWMYPROFILE,
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_UPDATEAVATAR,
+#cbProfileInner #cb_tabid_17 .cbMenuList .cbMenu_UE_DELETE_AVATAR{
+	display:none;
+}
+/*------------------------------*/
+/*        Annuaire - mail       */
+/*------------------------------*/
+#Page.cbform .componentheading{
+	font-size: 1.5em;
+	text-align: center;
+	margin: 0.5em -0.5em 1em;
+	background: #0096AE;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+	padding: 0.2em;
+	position: relative;
+	border: 1px solid #00434D;
+	text-shadow: 1px 1px 3px rgb(21, 21, 21);
+}
+#Page.cbform .componentheading a{
+	color: white;
+	font-size: 0.8em;
+}
+#Page.cbform .componentheading a:before{
+	content: '';
+	display: block;
+}
+#Page.cbform .componentheading:before {
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-left: 0.4em solid transparent;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+#Page.cbform .componentheading:after {
+	content: '';
+	border-top: 0.5em solid #00434D;
+	border-right: 0.4em solid transparent;
+	position: absolute;
+	top: 100%;
+	right: 0;
+}
+#Page.cbform form{
+	text-align: center;
+}
+#Page.cbform form .inputbox{
+	width:90%;
+}
+#Page.cbform form ol{
+	text-align:left;	
+}
+/*------------------------------*/
+/*             Footer           */
+/*------------------------------*/
+#Footer {
+	position: relative;
+	color: white;
+	text-align: right;
+}
+#Footer .lyt{
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 3px black;
+}
+#Footer .adress {
+  	display: inline-block;
+	float: left;
+	text-align: left;
+}
+#Footer .moduletable {
+  	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin-left: 1em;
+}
+#Footer .moduletable h3 {
+	color: #009BD6;
+}
+#Footer .moduletable ul{
+	list-style: none;
+	padding: 0;
+}
+#Footer .moduletable a{
+	color: white;
+	text-decoration: none;
+}
+#Footer .moduletable a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,312 @@
+/***********************************************************
+* Template for public zone of reborn template for ASSIDU 
+*
+* @author: Thomas HUGUENIN
+* #copyright: Assidu, All rights reserved (2013)
+************************************************************/
+
+/*-------------------------------*/
+/*       Static structure        */
+/*-------------------------------*/
+html{
+ background: black url("../images/dark-pattern.png");
+}
+
+/*------------------------------*/
+/*             Topbar           */
+/*------------------------------*/
+#TopBar{
+	height:5em;
+	left:0;
+	padding-right: 3em;
+	position:fixed;
+	right:0;
+	transition:0.5s;
+	text-align:right;
+	top:0;
+	z-index: 10;
+}
+#TopBar .logo{
+	background: white;
+	border-radius: 5px;
+	box-shadow: inset 0 0 0.5em black;
+	display: block;
+	height: 3em;
+	margin-left: 3em;
+	margin-top: 0.5em;
+	padding: 0.5em;
+	position: absolute;
+}
+#TopBar .menu{
+	display: inline-block;
+	margin: 2em 0;
+	padding-left: 1em;
+}
+#TopBar .menu li{
+	float: left;
+	list-style: none;
+	margin-left: 5px;
+}
+#TopBar .menu a{
+	color: white;
+	text-decoration: none;
+}
+#TopBar .mainmenu a {
+	background: rgba(255, 255, 255, 0.7);
+	color: black;
+	padding: 0.2em 0.5em;
+	transition: 0.3s;
+	border-radius: 5px 0;
+}
+#TopBar .mainmenu a:hover {
+	background: white;
+	box-shadow: inset 0 0 5px black;
+	color: #009BD6;
+}
+#TopBar .mainmenu .current a{
+	background: white;
+	border-radius: 0.5em 0;
+	box-shadow: inset 0 0 5px black;
+	color: #009BD6;
+	padding: 0.5em;
+}
+#TopBar .connexionmenu a{
+	border-radius: 0.5em 0;
+	padding: 0.5em;
+}
+#TopBar .menu a.blue {background: #009BD6;}
+#TopBar .menu a.blue:hover {background: #009BD6 linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);}
+#TopBar .menu a.green {background: rgb(19,160,0);}
+#TopBar .menu a.green:hover {background: rgb(19,160,0) linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);}
+
+/*------------------------------*/
+/*         Topbar - solid       */
+/*------------------------------*/
+#TopBar.solid{
+	background: white;
+	box-shadow: 1px 1px 0.5em;
+	height: 4em;	
+}
+#TopBar.solid .logo{
+	box-shadow: none;
+	margin-top: 0;
+}
+#TopBar.solid .mainmenu a:hover {
+	box-shadow: none;
+	text-decoration:underline;
+}
+#TopBar.solid .mainmenu .current a {
+	box-shadow: none;
+	border: 1px solid;
+}
+#TopBar.solid .menu {
+	margin: 1.5em 0;
+}
+
+/*------------------------------*/
+/*           Content            */
+/*------------------------------*/
+#Page {
+	display:none;
+	position: absolute;
+	top: 6.5em;
+	left:10em;
+	right:10em;
+	background: white;
+	border: 1px solid;
+	box-shadow: 0 0 2em 0.2em black;
+}
+#Page .page-header{
+	font-size: 1.5em;
+	text-align: center;
+}
+#Page .part{
+	margin: 0 2em 2em;
+	text-align: justify;
+}
+
+/*------------------------------*/
+/*      Content - Register      */
+/*------------------------------*/
+#Register-Background{
+  background-image: url('../images/01.png');
+}
+#Register-Panel {
+	width: 500px;
+}
+#Register-Panel .panel {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 1em;
+	padding: 1em;
+	position: relative;
+}
+#Register-Panel .componentheading {
+	font-size: 2em;
+	margin-bottom: 0.5em;
+	color: #009BD6;
+}
+#registrationTable #cbfr_54,#registrationTable #cbfr_83,#registrationTable #cbfr_84,#registrationTable #cbfr_85,#registrationTable #cbfr_86,#registrationTable #cbcbfr_87,#registrationTable #cbfr_88,#registrationTable #cbfr_89,#registrationTable #cbfr_70,#registrationTable #cbfr_71,#registrationTable #cbfr_72,#registrationTable #cbfr_73,#registrationTable #cbfr_74,#registrationTable #cbfr_75,#registrationTable #cbfr_76,#registrationTable #cbfr_63,#registrationTable #cbfr_64,#registrationTable #cbfr_65,#registrationTable #cbfr_66,#registrationTable #cbfr_67,#registrationTable #cbfr_68,#registrationTable #cbfr_69,#registrationTable #cbfr_60,#registrationTable #cbfr_78,#registrationTable #cbfr_34,#registrationTable #cbfr_79,#registrationTable #cbfr_80,#registrationTable #cbfr_81,#registrationTable #cbfr_62,#registrationTable #cbfr_58,#registrationTable #cbfr_57,#registrationTable #cbfr_82,#registrationTable #cbfr_77,#registrationTable #cbfr_87{
+	display:none;
+}
+#registrationTable .cb_result_warning {
+	display:none !important;
+}
+.fieldCell input.cbValidationErrortext, .fieldCell input.cbValidationErrorpassword{
+	border-style: solid;
+	border-width: 1px;
+}
+
+/*------------------------------*/
+/*      Content - Login         */
+/*------------------------------*/
+#Login-Background{
+  background-image: url('../images/background-abstract-green.jpg');
+}
+#Login-Panel {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 1em;
+	padding: 2em 1em 1em;
+	width: 600px;
+	position: relative;
+}
+#Migration-Module{
+  display: inline-block;
+  width: 49%;
+}
+#Migration-Module:before{
+	content: '';
+	display: inline-block;
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('../images/warning-triangle-blue.png');/* TODO réduire taille image */
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 0.5em;
+}
+#MigrationBtnLogin{
+	color: #009BD6;
+	text-decoration: none;
+}
+#MigrationBtnLogin:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+#Login-Module{
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+}
+#Login-Module .error{
+	position: absolute;
+	bottom: -2em;
+	background: rgba(247, 2, 2, 0.6);
+	left: 5em;
+	right: 5em;
+	text-align: center;
+	color: white;
+}
+#Login-Module .componentheading{
+	position: absolute;
+	font-size: 2em;
+	left: 0;
+	right: 0;
+	top: 0.5em;
+	color: #009BD6;
+}
+#Login-Module fieldset{
+	border:none;
+}
+#form-login-username span,#form-login-password span {
+	display: inline-block;
+	width: 100%;
+}
+#form-login-username span input,#form-login-password span input{
+	width: 100%;
+	background: whitesmoke;
+	border: 1px solid lightgray;
+	text-align: center;
+}
+#Login-Module ul.cbLoginLinksList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#Login-Module ul.cbLoginLinksList a{
+	font-size: small;
+	color: #009BD6;
+	text-decoration: none;
+}
+#Login-Module ul.cbLoginLinksList a:hover{
+	text-decoration: underline;
+}
+
+/*------------------------------*/
+/*      Content - Lost pwd      */
+/*------------------------------*/
+#Lost-Pwd-Panel{
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 1em;
+	padding: 2em 1em 1em;
+	width: 600px;
+	position: relative;
+}
+#Lost-Pwd-Panel .componentheading {
+	font-size: 2em;
+	color: #009BD6;	
+}
+#Lost-Pwd-Panel ul{
+	padding: 0;
+	list-style: none;
+	text-align: justify;
+}
+#cb_line_checkemail{text-align: center;}
+#cb_line_checkemail label{
+	display: inline-block;
+	float: none;
+	width: auto;
+}
+#cb_line_checkemail .cb_field{
+	display: inline-block;
+	float: none;
+	width: auto;
+}
+/*------------------------------*/
+/*             Footer           */
+/*------------------------------*/
+#Footer {
+	position: relative;
+	color: white;
+	text-align: right;
+}
+#Footer .lyt{
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 3px black;
+}
+#Footer .adress {
+  	display: inline-block;
+	float: left;
+	text-align: left;
+}
+#Footer .moduletable {
+  	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin-left: 1em;
+}
+#Footer .moduletable h3 {
+	color: #009BD6;
+}
+#Footer .moduletable ul{
+	list-style: none;
+	padding: 0;
+}
+#Footer .moduletable a{
+	color: white;
+	text-decoration: none;
+}
+#Footer .moduletable a:hover{
+	text-decoration: underline;
+}

@@ -1,11 +1,21 @@
-        <div id="Banner">
-      		<img src=<?php echo '"'.$this->baseurl.'/images/Templates/banner_template.png'.'"' ?>/>
-    	</div>
-     	<div id="Content" class="register" >
-     	    <jdoc:include type="modules" name="position-7" /> <!-- TODO changer nom position -->
-        	<jdoc:include type="component" />
-	    </div>  
-	    <script> 
+    	<?php include 'lyt_topbar_public.php';?>
+     	<div id="Register-Background" class="background-tile">
+	       	<div class="center-in-div-1">
+	       	<div class="center-in-div-2">
+	       	<div class="center-in-div-3">
+	       	  <div id="Register-Panel" class="center-in-div-panel">
+		       	<div class="panel" style="margin-bottom:1em;">
+			    	<jdoc:include type="component" />
+	          	</div>
+				<div class="panel">
+					<jdoc:include type="modules" name="position-7" /> <!-- TODO changer nom position -->
+				</div>
+	          </div>
+	        </div>
+	        </div>
+	        </div>
+	    </div>   
+	    <script> /* TODO déplacer dans module migration */
 	    /* Init */
 	    var migrationAssiduV1V2 = false;
 	    String.prototype.sansAccent = function(){

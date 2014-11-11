@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="0.0.1" method="upgrade">
+	<name>assidu_home</name>
+	<author>Thomas HUGUENIN</author>
+	<creationDate>Septembre 2014</creationDate>
+	<copyright>(C) 2014 Assidu-NFC. All rights reserved.</copyright>
+	<authorEmail>contact@assidu-utbm.fr</authorEmail>
+	<authorUrl>www.assidu-utbm.fr</authorUrl>
+	<version>0.1.0.9</version>
+	<description>COM_ASSIDU_HOME_DESCRIPTION</description>
+
+	<!-- Database update -->
+    <update>
+            <schemas>
+                    <schemapath type="mysql">sql/updates/mysql</schemapath>
+            </schemas>
+    </update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>assidu_home.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+	</files>
+	<languages folder="site">
+		<language tag="fr-FR">language/fr-FR.com_assidu_home.ini</language>
+	</languages>
+
+	<administration>
+        <menu>COM_ASSIDU_HOME_MENU</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>assidu_home.php</filename>
+            <folder>sql</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="fr-FR">language/fr-FR.com_assidu_home.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_assidu_home.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
