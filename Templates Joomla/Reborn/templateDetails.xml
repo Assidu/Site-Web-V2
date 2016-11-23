@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 	<extension version="3.0" type="template" client="site" method="upgrade">
 	<name>reborn</name>
-	<version>0.14</version>
+	<version>0.16</version>
 	<creationDate>june 2013</creationDate>
 	<author>Thomas HUGUENIN</author>
 	<authorEmail>contact@assidu-utbm.fr</authorEmail>
@@ -22,22 +22,8 @@
 		<folder>layout</folder>
 	</files>
 	<positions>
-		<position>position-0</position>
-		<position>position-1</position>
-		<position>position-2</position>
-		<position>position-3</position>
-		<position>position-4</position>
-		<position>position-5</position>
-		<position>position-6</position>
-		<position>position-7</position>
-		<position>TopBar-Menu-Accueil</position>
-		<position>TopBar-Menu-Connecte</position>
-		<position>Connexion</position>
-		<position>Footer-Accueil</position>
-		<position>Footer-Connecte</position>
-		<position>BannerNews</position>
-		<position>TopBar-UserMenu-Accueil</position>
-		<position>TopBar-UserMenu-Connecte</position>
+		<position>TopBar-Menu-Central</position>
+		<position>TopBar-Menu-Right</position>
 	</positions>
 	<languages folder="language">
 		<language tag="fr-FR">fr-FR/fr-FR.tpl_reborn.ini</language>
