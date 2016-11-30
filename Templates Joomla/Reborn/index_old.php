@@ -1,36 +1,36 @@
 <?php
 	defined( '_JEXEC' ) or die( 'Restricted access' );
-	
+
 	$option = JRequest::getCmd('option', '');
 	$view = JRequest::getCmd('view', '');
 	$layout = JRequest::getCmd('layout', '');
 	$task = JRequest::getCmd('task', '');
 	$itemid = JRequest::getCmd('Itemid', '');
-	
+
 	if($option == 'com_users'){ /* pourquoi on fait ça déjà ?? */
 		header('Location: /Beta/index.php/connect'); /* TODO non static */
 	}
 	$user = JFactory::getUser();
-	
-	$db = & JFactory::getDBO(); 
-	if (JRequest::getCmd('view', 0) == "category") { 
-	   $idCat = JRequest::getInt('id');	      
-	}elseif(JRequest::getCmd('view', 0) == "article") { 
+
+	$db = & JFactory::getDBO();
+	if (JRequest::getCmd('view', 0) == "category") {
+	   $idCat = JRequest::getInt('id');
+	}elseif(JRequest::getCmd('view', 0) == "article") {
 		$idArt = JRequest::getInt('id');
 	}
 	/* Give Category when article display but make a db call
-	elseif (Jrequest::getCmd('view', 0) == "article") { 
-	   $temp=explode(":",JRequest::getInt('id')); 
-	   $query = "SELECT catid FROM #__content WHERE id = ".$temp[0]; 
-	   $db->setQuery( $query ); 
-	   $items  = $db->loadResult(); 
-	   //return $items; 
+	elseif (Jrequest::getCmd('view', 0) == "article") {
+	   $temp=explode(":",JRequest::getInt('id'));
+	   $query = "SELECT catid FROM #__content WHERE id = ".$temp[0];
+	   $db->setQuery( $query );
+	   $items  = $db->loadResult();
+	   //return $items;
 	} */
 	if($option == 'com_ajax'){
 		if(JRequest::getCmd('module', '') == 'migrationv1v2'){
      		echo '<jdoc:include type="modules" name="position-7" />';
 		}else{
-			echo 'Error in ajax module';	
+			echo 'Error in ajax module';
 		}
 	}else{
 ?>
@@ -39,49 +39,14 @@
   <head>
   	<!-- Joomla -->
     <jdoc:include type="head" />
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
-    
+
     <!-- External libraries -->
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/scripts/jquery.js" type="text/javascript"></script>
-    
-    <!-- Scripts -->
-    <script>
-      $(function() {
-        /* Tools */
-        getDocHeight = function(){
-          return Math.max($(document).height(),$(window).height(),/* For opera: */document.documentElement.clientHeight);
-        };
-    
-        getDocWidth = function(){
-          return Math.max($(document).width(),$(window).width(),/* For opera: */document.documentElement.clientWidth);
-        };
-    
-        /* UI */
-        adaptEltSizeToWindow = function(){
-          <?php 
-     		if($this->params->get('banner_mode')=='custo'){
-          		echo 'var bannerHeight=482;';
-     		} else {
-     			echo 'var bannerHeight=232;';
-     		}
-          ?>
-          $("#Content").css("min-height", $(window).height() - 320 /* Topbar + banner height */);
-          //$("#LeftModules").css("min-height", $(window).height() - bannerHeight);
-        };
-    
-        /* Init */
-        $("document").ready(function (e) {
-          adaptEltSizeToWindow();
-          window.onresize = function(event) {
-            adaptEltSizeToWindow();
-          };
-        });
-      });
-    </script> 
   </head>
   <body>
     <?php
@@ -161,7 +126,7 @@
 	 }
 	 // Display Topbar
      include 'layout/lyt_header.php';
-     
+
      // Display Content
      if($option == 'com_content'){
      	include 'layout/lyt_' . $view . '.php';
@@ -187,7 +152,7 @@
     	</div>
      	<div id="Content">
         	<jdoc:include type="component" />
-	    </div>     	
+	    </div>
 	 <?php
      }else{ ?>
      	<div id="Content">
