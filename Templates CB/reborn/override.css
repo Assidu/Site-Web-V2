@@ -1,0 +1,15 @@
+cb_template .nav-tabs > li > a {
+ background: red;
+}
+.cb_template .nav-tabs > li.active > a,
+.cb_template .nav-tabs > li.active > a:hover,
+.cb_template .nav-tabs > li.active > a:focus {
+ background: blue;
+}
+.cb_template .cbUserListRow.sectiontableentry1 {
+ background: red;
+}
+
+.cb_template .cbUserListRow.sectiontableentry2 {
+ background: blue;
+}
