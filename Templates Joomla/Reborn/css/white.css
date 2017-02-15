@@ -178,8 +178,11 @@ body{
   flex: 1;
 	text-align: left;
 }
+#Footer .adress p {
+  padding-bottom:15px;
+}
 #Footer .moduletable {
-  	display: inline-block;
+  display: inline-block;
 	vertical-align: top;
 	text-align: center;
 	margin-left: 1em;

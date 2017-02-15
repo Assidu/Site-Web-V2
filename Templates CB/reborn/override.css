@@ -1,15 +1,72 @@
-cb_template .nav-tabs > li > a {
- background: red;
+
+/* Design ribbon pour le canvas du profile */
+.cb_template .cbCanvasLayout {
+  background-color: #0097db;
+  padding: 5px;
+  margin: 0 -2em;
+  border: 1px solid black;
 }
-.cb_template .nav-tabs > li.active > a,
-.cb_template .nav-tabs > li.active > a:hover,
-.cb_template .nav-tabs > li.active > a:focus {
- background: blue;
+.cb_template .cbCanvasLayout:before {
+    content: '';
+    border-top: 1.5em solid #004a6b;
+    border-left: 2em solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
-.cb_template .cbUserListRow.sectiontableentry1 {
- background: red;
+.cb_template .cbCanvasLayout:after {
+    content: '';
+    border-top: 1.5em solid #004a6b;
+    border-right: 2em solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
 }
 
-.cb_template .cbUserListRow.sectiontableentry2 {
- background: blue;
+/* Redimensionnement et positionnement de l'image de profile */
+.cb_template .cbCanvasLayout .cbCanvasLayoutTop .cbCanvasLayoutPhoto{
+  bottom: 37px;
+  left:20px;
+  width: 124px;
+  height: 124px;
+}
+.cb_template .cbCanvasLayout .cbCanvasLayoutTop .cbCanvasLayoutPhoto .cb_form_line .cbImgPict{
+  width: 124px;
+  height: 124px;
+}
+
+/* Repositionnnement des textes de titre du profile */
+.cb_template .cbCanvasLayout .cbCanvasLayoutBottom{
+  position: absolute;
+  top: 37px;
+  z-index: 10;
+  background: transparent;
+  border: none;
+}
+.cb_template .cbCanvasLayout .cbCanvasLayoutBottom .cbCanvasLayoutTitle{
+  padding-left: 165px;
+}
+/* Modification affichage du titre du profile */
+#cb_tabid_19 {
+  font-size: xx-large;
+  color: white;
+}
+/* Modification affichage des informations de diplôme */
+#cb_tabid_25 div{
+  display: inline-block; /* Sur une ligne */
+  margin-bottom: 0px;
+  color: #1094cf;
+}
+#cb_tabid_25 .cb_field {
+  padding: 5px;
+}
+
+/* Repositionnement des statistiques */
+.cb_template .cbCanvasLayout .cbCanvasLayoutBottom .cbCanvasLayoutCounters {
+  padding-left: 170px;
+  font-size: small;
+  color: #a0a0a0;
+}
+.cb_template .cbCanvasLayout .cbCanvasLayoutBottom .cbCanvasLayoutCounters .cb_form_line .control-label{
+  display: none;
 }
