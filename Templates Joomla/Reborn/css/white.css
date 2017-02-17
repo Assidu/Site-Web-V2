@@ -19,7 +19,7 @@ body{
 #TopBar {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   position: fixed;
   top: 0;
   left: 0;
@@ -52,17 +52,33 @@ body{
 }
 #TopbarCentralMenu .menu li {
   display: flex;
+  color: #337ab7;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  margin: 0 4px;
+  justify-content: inherit;
+  min-height: 3.5em;
+  padding: 0 4px;
+  border-left: 1px solid #a5c2dc;
 }
-#TopbarCentralMenu .menu li a{
-  text-decoration: none;
-  color: white;
-  padding: 4px;
-  box-sizing: border-box;
-  background-color: lightblue;
+#TopbarCentralMenu .menu li:last-child {
+    border-right: 1px solid #a5c2dc;
+}
+#TopbarCentralMenu .menu li:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #337ab7;
+}
+#TopbarCentralMenu .menu li:active {
+    background-color: #5898d0;
+}
+#TopbarCentralMenu .menu li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#TopbarRightMenu {
+  margin-bottom: 0.9em;
 }
 #TopbarRightMenu .menu {
     display: inline-block;
@@ -200,4 +216,76 @@ body{
 }
 #Footer .moduletable a:hover{
 	text-decoration: underline;
+}
+
+/*------------------------------*/
+/*             Login            */
+/*------------------------------*/
+.CB_Login_Panel
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../images/background-abstract-green.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.CB_Login_Panel_Title {
+    font-size: xx-large;
+    margin: 0.5em 0;
+}
+.CB_Login_Panel .userdata .control-group {
+    margin: 0.6em 0;
+}
+.CB_Login_Panel .userdata span.add-on {
+    margin-right: 0.4em;
+}
+.CB_Login_Panel .userdata input[type="text”], .CB_Login_Panel .userdata input[type=“password"]  {
+    padding: 2px 4px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.CB_Login_Panel .userdata button {
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 5px 0;
+    text-decoration: none;
+    background: #009BD6;
+    color: white;
+    border: 1px solid #009BD6;
+}
+.CB_Login_Panel .userdata button:hover {
+    background: #009BD6 linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);
+    cursor: pointer;
+}
+.CB_Login_Panel .userdata button:active {
+    background: #3dafdb linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);
+}
+#form-login-links {
+  margin-top: 3em;
+  padding: 0;
+}
+#form-login-links li {
+   list-style:none;
+}
+#form-login-links li a {
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 5px 0;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid #ffffff;
+}
+#form-login-links li a:active {
+    background: rgba(255, 255, 255, 0.55);
+}
+#form-login-links li a:hover {
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
 }
