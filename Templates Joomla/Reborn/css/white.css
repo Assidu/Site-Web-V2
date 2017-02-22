@@ -244,7 +244,7 @@ body{
 .CB_Login_Panel .userdata span.add-on {
     margin-right: 0.4em;
 }
-.CB_Login_Panel .userdata input[type="text”], .CB_Login_Panel .userdata input[type=“password"]  {
+.CB_Login_Panel .userdata input[type="text"], .CB_Login_Panel .userdata input[type="password"]  {
     padding: 2px 4px;
     border: 1px solid black;
     background-color: white;

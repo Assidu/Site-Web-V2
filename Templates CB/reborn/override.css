@@ -1,4 +1,85 @@
 
+/*------------------------------*/
+/*             Login            */
+/*------------------------------*/
+.cb_template_reborn.cbLostPassForm {
+  margin-top: 4em;
+  text-align: center;
+}
+.cb_template_reborn.cbLostPassForm .page-header{
+  border-bottom: none;
+}
+.cb_template_reborn.cbLostPassForm .cb_form .control-label{
+    color:#009BD6;
+    font-size: larger;
+}
+.cb_template_reborn.cbLostPassForm .cb_form .control-label, .cbLostPassForm .cb_form .cb_field{
+    width: 100%;
+}
+.cb_template_reborn.cbLostPassForm .cb_form .col-sm-offset-3.col-sm-9{
+  margin: 0 25%;
+  width: 50%;
+}
+#lostpassdesc .cb_field ,#lostusernamepassdesc .cb_field, #lostusernamedesc .cb_field{
+    padding: 1em;
+    border: 1px solid lightcoral;
+    background-color: #f5e7e7;
+}
+.cb_template_reborn.cbLostPassForm .btn-primary{
+  background: #009BD6;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 5px 0;
+  border: 1px solid #009BD6;
+}
+.cb_template_reborn.cbLostPassForm .btn-primary[disabled]{
+  background-color: #307691;
+  border-color: #307691;
+}
+.cb_template_reborn.cbLostPassForm .btn-primary:hover {
+  background: #009BD6 linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);
+}
+
+/*------------------------------*/
+/*             Login            */
+/*------------------------------*/
+.cb_template.cb_template_reborn.cbRegistration .page-header {
+    margin: 0.5em -0.5em 1em;
+    padding: 0;
+    border: none;
+    font-size: 1.5em;
+    background: #0096AE;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+}
+.cb_template.cb_template_reborn.cbRegistration .page-header h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0.2em;
+    position: relative;
+    border: 1px solid #00434D;
+    text-shadow: 1px 1px 3px rgb(21, 21, 21);
+}
+.cb_template.cb_template_reborn.cbRegistration .page-header h3:before {
+    content: '';
+    border-top: 0.5em solid #00434D;
+    border-left: 0.3em solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.cb_template.cb_template_reborn.cbRegistration .page-header h3:after {
+    content: '';
+    border-top: 0.5em solid #00434D;
+    border-right: 0.3em solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+/*------------------------------*/
+/*            Profile           */
+/*------------------------------*/
 /* Design ribbon pour le canvas du profile */
 .cb_template .cbCanvasLayout {
   background-color: #0097db;
