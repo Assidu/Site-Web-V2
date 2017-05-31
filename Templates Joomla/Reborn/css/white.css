@@ -145,14 +145,16 @@ body{
   border: 1px solid;
   box-shadow: 0 0 2em 0.2em black;
 }
-#Content .item-page .page-header {
+#Content .item-page .page-header{
     margin: 0.5em -0.5em 1em;
+    padding: 0;
+    border: none;
     font-size: 1.5em;
     background: #0096AE;
     color: white;
     box-shadow: 1px 1px 5px black;
 }
-#Content .item-page .page-header h2 {
+#Content .item-page .page-header h2{
     text-align: center;
     margin: 0;
     padding: 0.2em;
@@ -160,7 +162,7 @@ body{
     border: 1px solid #00434D;
     text-shadow: 1px 1px 3px rgb(21, 21, 21);
 }
-#Content .item-page .page-header h2:before {
+#Content .item-page .page-header h2:before{
     content: '';
     border-top: 0.5em solid #00434D;
     border-left: 0.3em solid transparent;
@@ -168,7 +170,7 @@ body{
     top: 100%;
     left: 0;
 }
-#Content .page-header h2:after {
+#Content .page-header h2:after{
     content: '';
     border-top: 0.5em solid #00434D;
     border-right: 0.3em solid transparent;
@@ -217,7 +219,6 @@ body{
 #Footer .moduletable a:hover{
 	text-decoration: underline;
 }
-
 /*------------------------------*/
 /*             Login            */
 /*------------------------------*/

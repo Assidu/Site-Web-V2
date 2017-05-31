@@ -1,4 +1,70 @@
 
+
+/*------------------------------*/
+/*      Login/registration      */
+/*------------------------------*/
+.cb_template.cb_template_reborn.cbRegistration .page-header {
+    margin: 0.5em -0.5em 1em;
+    padding: 0;
+    border: none;
+    font-size: 1.5em;
+    background: #0096AE;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+}
+.cb_template.cb_template_reborn.cbRegistration .page-header h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0.2em;
+    position: relative;
+    border: 1px solid #00434D;
+    text-shadow: 1px 1px 3px rgb(21, 21, 21);
+}
+.cb_template.cb_template_reborn.cbRegistration .page-header h3:before {
+    content: '';
+    border-top: 0.5em solid #00434D;
+    border-left: 0.3em solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.cb_template.cb_template_reborn.cbRegistration .page-header h3:after {
+    content: '';
+    border-top: 0.5em solid #00434D;
+    border-right: 0.3em solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+/*------------------------------*/
+/*         Registration         */
+/*------------------------------*/
+#registrationTable {
+    margin: 0 2em;
+}
+#registrationTable .cbTabs .cbTabsNav {
+    text-align: center;
+}
+#registrationTable .cbTabs .cbTabsNav li.cbTabNav {
+    float: none;
+    display: inline-block;
+}
+#registrationTable .cbTabs .cbTabsContent  .cbTabPane .btn-primary{
+  background: #009BD6;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 5px 0;
+  border: 1px solid #009BD6;
+}
+#registrationTable .cbTabs .cbTabsContent  .cbTabPane .btn-primary[disabled]{
+  background-color: #307691;
+  border-color: #307691;
+}
+#registrationTable .cbTabs .cbTabsContent  .cbTabPane .btn-primary:hover {
+  background: #009BD6 linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);
+}
+
 /*------------------------------*/
 /*             Login            */
 /*------------------------------*/
@@ -38,43 +104,6 @@
 }
 .cb_template_reborn.cbLostPassForm .btn-primary:hover {
   background: #009BD6 linear-gradient(to bottom, rgba(255, 255, 255, 0.29) 0%,rgba(179, 179, 179, 0.5) 50%,rgba(111, 111, 111, 0.5) 51%,rgba(128, 128, 128, 0) 100%);
-}
-
-/*------------------------------*/
-/*             Login            */
-/*------------------------------*/
-.cb_template.cb_template_reborn.cbRegistration .page-header {
-    margin: 0.5em -0.5em 1em;
-    padding: 0;
-    border: none;
-    font-size: 1.5em;
-    background: #0096AE;
-    color: white;
-    box-shadow: 1px 1px 5px black;
-}
-.cb_template.cb_template_reborn.cbRegistration .page-header h3 {
-    text-align: center;
-    margin: 0;
-    padding: 0.2em;
-    position: relative;
-    border: 1px solid #00434D;
-    text-shadow: 1px 1px 3px rgb(21, 21, 21);
-}
-.cb_template.cb_template_reborn.cbRegistration .page-header h3:before {
-    content: '';
-    border-top: 0.5em solid #00434D;
-    border-left: 0.3em solid transparent;
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-.cb_template.cb_template_reborn.cbRegistration .page-header h3:after {
-    content: '';
-    border-top: 0.5em solid #00434D;
-    border-right: 0.3em solid transparent;
-    position: absolute;
-    top: 100%;
-    right: 0;
 }
 
 /*------------------------------*/
@@ -128,17 +157,17 @@
   padding-left: 165px;
 }
 /* Modification affichage du titre du profile */
-#cb_tabid_19 {
+.cbProfile #cb_tabid_19 {
   font-size: xx-large;
   color: white;
 }
 /* Modification affichage des informations de diplôme */
-#cb_tabid_25 div{
+.cbProfile #cb_tabid_25 div{
   display: inline-block; /* Sur une ligne */
   margin-bottom: 0px;
   color: #1094cf;
 }
-#cb_tabid_25 .cb_field {
+.cbProfile #cb_tabid_25 .cb_field {
   padding: 5px;
 }
 
@@ -150,4 +179,98 @@
 }
 .cb_template .cbCanvasLayout .cbCanvasLayoutBottom .cbCanvasLayoutCounters .cb_form_line .control-label{
   display: none;
+}
+
+/*------------------------------*/
+/*            Annuaire          */
+/*------------------------------*/
+.cb_template .cbUserListHead .page-header{
+    margin: 0.5em -0.5em 1em;
+    padding: 0;
+    border: none;
+    font-size: 1.5em;
+    background: #0096AE;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+}
+.cb_template .cbUserListHead .page-header h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0.2em;
+    position: relative;
+    border: 1px solid #00434D;
+    text-shadow: 1px 1px 3px rgb(21, 21, 21);
+}
+.cb_template .cbUserListHead .page-header h3:before{
+    content: '';
+    border-top: 0.5em solid #00434D;
+    border-left: 0.3em solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.cb_template .cbUserListHead .page-header h3:after{
+    content: '';
+    border-top: 0.5em solid #00434D;
+    border-right: 0.3em solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+.cb_template .cbUserListHead .cbUserListDescription{
+  display: none;
+}
+.cb_template .cbUserListHead .cbUserListResultCount{
+  text-align: right;
+}
+.cb_template .cbUserListLayoutGrid {
+  text-align: center;
+}
+.cb_template .cbUserListLayoutGrid .img-thumbnail{
+    background-color: whitesmoke;
+}
+.cb_template .cbUserListLayoutGrid .img-thumbnail:hover {
+    background-color: #ebf6f9;
+}
+.cb_template .Annuaire-Liste-Avatar{
+  position:relative;
+  height: 100px;
+}
+.cb_template .Annuaire-Liste-Avatar .cbUserListFC_avatar img{
+  margin-top: 10px;
+  padding: 5px;
+  height: 75px;
+}
+.cb_template .Annuaire-Liste-Avatar .cbUserListFL_onlinestatus {
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+.cb_template .Annuaire-Liste-Nom a {
+  text-decoration: none;
+}
+.cb_template .Annuaire-Liste-Nom .cbUserListFC_cb_nom,
+.cb_template .Annuaire-Liste-Nom a:hover {
+    color: #337ab7;
+}
+.cb_template .Annuaire-Liste-Nom .cbUserListFieldLine {
+  display: inline-block;
+}
+.cb_template .Annuaire-Liste-Nom .cbUserListFL_firstname{
+  margin-right: 5px;
+}
+.cb_template .Annuaire-Liste-Promotion .cbUserListFieldLine {
+  display: inline-block;
+}
+.cb_template .Annuaire-Liste-Promotion .cbUserListFL_cb_school:after{
+  content: "-";
+  display: inline-block;
+  margin: 0px 4px;
+}
+.cb_template .Annuaire-Liste-Branche{
+
 }
