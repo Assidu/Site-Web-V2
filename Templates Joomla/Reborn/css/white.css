@@ -59,6 +59,34 @@ body{
   padding: 0 4px;
   border-left: 1px solid #a5c2dc;
 }
+#TopbarCentralMenu .menu li.parent {
+  position: relative;
+}
+#TopbarCentralMenu .menu li.parent:hover > .nav-child {
+  display: inline-block;
+}
+#TopbarCentralMenu .menu li.parent .nav-child {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+#TopbarCentralMenu .menu li.parent .nav-child li {
+  color: white;
+  background: #bfbfbf;
+  justify-content: center;
+  margin: 1px;
+}
+#TopbarCentralMenu .menu li.parent .nav-child li:hover {
+    cursor: pointer;
+    background-color: #5b9fd7;
+}
+#TopbarCentralMenu .menu li.parent .nav-child li:active {
+    background-color: #3277b3;
+}
 #TopbarCentralMenu .menu li:last-child {
     border-right: 1px solid #a5c2dc;
 }
