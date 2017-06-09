@@ -1,7 +1,4 @@
-.cb_template.cb_template_reborn{
-    padding:1.5em;
-}
-.cb_template.cb_template_reborn .page-header h3{
+.cb_template .page-header h3{
   text-align: center;
   margin-bottom: 2em;
 }
@@ -195,6 +192,29 @@
 .cb_template .cbCanvasLayout .cbCanvasLayoutBottom .cbCanvasLayoutCounters .cb_form_line .control-label{
   display: none;
 }
+/* Repositionnement des réseaux sociaux */
+.SocialNetworks a {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin-bottom: -4px; /* ?? */
+    overflow: hidden;
+    color: transparent;
+    background-size: contain;
+}
+.SocialNetworks a:hover,.SocialNetworks a:focus {
+    color: transparent;
+    background-color: white;
+    border-radius: 100%;
+    outline: none;
+}
+.SocialNetworks .Facebook a{background-image: url('./images/socials/facebook.png');}
+.SocialNetworks .Google a{background-image: url('./images/socials/googleplus.png');}
+.SocialNetworks .LinkedIn a{background-image: url('./images/socials/linkedin.png');}
+.SocialNetworks .Skype a{background-image: url('./images/socials/skype.png');}
+.SocialNetworks .Twitter a{background-image: url('./images/socials/twitter.png');}
+.SocialNetworks .Viadeo a{background-image: url('./images/socials/viadeo.png');}
+.SocialNetworks .WebSite a{background-image: url('./images/socials/website.png');}
 
 /*------------------------------*/
 /*            Annuaire          */
