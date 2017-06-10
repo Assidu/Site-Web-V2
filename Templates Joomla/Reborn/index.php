@@ -7,6 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/white.css" type="text/css" />
 
     <!-- External libraries -->
@@ -18,9 +19,10 @@
 			<div id="TopbarCentralMenu">
 				<jdoc:include type="modules" name="TopBar-Menu-Central" style="none" />
 			</div>
-			<div id="TopbarRightMenu">
+			<!-- <div id="TopbarRightMenu">
 				<jdoc:include type="modules" name="TopBar-Menu-Right" style="none" />
-			</div>
+			</div> -->
+				<jdoc:include type="modules" name="TopBar-Menu-Right" style="none" />
 		</div>
 
 		<div id="Content">

@@ -276,6 +276,7 @@
   margin-top: 10px;
   padding: 5px;
   height: 75px;
+  border-radius: 100%;
 }
 .cb_template .Annuaire-Liste-Avatar .cbUserListFL_onlinestatus {
     position: absolute;
