@@ -193,6 +193,14 @@
   display: none;
 }
 /* Repositionnement des réseaux sociaux */
+.cb_template .cbCanvasLayout .cbCanvasLayoutBottom .cbCanvasLayoutCounters .cb_form_line.SocialConnection {
+ height: 2em;
+ padding: 4px;
+ color: white;
+ background-color: #3d8ccf;
+ border-radius: 4px;
+ cursor: default;
+}
 .SocialNetworks a {
     display: inline-block;
     width: 2em;
@@ -306,7 +314,4 @@
   content: "-";
   display: inline-block;
   margin: 0px 4px;
-}
-.cb_template .Annuaire-Liste-Branche{
-
 }
